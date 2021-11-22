@@ -8,3 +8,5 @@
 
 User.create(username: "wcheung", email: "wcheung@gmail.com", full_name: "Wesley Cheung", password: "password")
 User.create(username: "wesleycheungg", email: "wesleycheung1998@gmail.com", full_name: "Wes Cheung", password: "password")
+User.create(username: "test", email: "test@gmail.com", full_name: "Test", password: "bad
+")
