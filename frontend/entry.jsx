@@ -1,13 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { login, signup, logout } from './util/session_api_util'
+// import { login, signup, logout } from './util/session_api_util'
+import configureStore from './store/store'
+import Root from './components/root'
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    const store = configureStore();
+    
+    // TESTING START
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
+    // TESTING END
+    
+    // window.login = login
+    // window.signup = signup
+    // window.logout = logout
+    
     const root = document.getElementById('root')
-    ReactDOM.render(<h1>hello</h1>, root)
-
-    window.login = login
-    window.signup = signup
-    window.logout = logout
+    ReactDOM.render(<Root store={store} />, root)
 })
