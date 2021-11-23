@@ -1,8 +1,20 @@
 import React from 'react';
+import { Route } from "react-router-dom"
+import GreetingContainter from './greeting/greeting_container';
+import LoginFormContainer from './session_form/login_form_container'
+import SignupFormContainer from './session_form/signup_form_container'
 
 const App = () => (
     <div>
-        <h1>Shuttr</h1>
+        <header>
+            <h1>Shuttr</h1>
+            <GreetingContainter />
+        </header>
+        <div>
+            <Route path='/login' component={LoginFormContainer} />
+            <Route path='/signup' component={SignupFormContainer} />
+        </div>
+
     </div>
 );
 

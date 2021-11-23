@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import { login, signup, logout } from './util/session_api_util'
+import { login, signup, logout } from './util/session_api_util'
 import configureStore from './store/store'
 import Root from './components/root'
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.dispatch = store.dispatch;
     // TESTING END
     
-    // window.login = login
+    window.login = login
     // window.signup = signup
     // window.logout = logout
     
