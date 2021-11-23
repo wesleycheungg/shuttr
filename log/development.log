@@ -2119,3 +2119,24 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 1498ms (Views: 1486.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2021-11-23 10:20:15 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (56.8ms)
+Completed 200 OK in 318ms (Views: 291.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-11-23 10:20:52 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 114ms (Views: 111.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-11-23 10:21:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 2250ms (Views: 2243.3ms | ActiveRecord: 0.0ms)
+
+
