@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { login, signup, remove } from '../../actions/session_actions';
 import SessionForm from './session_form'
+import { Link } from 'react-router-dom';
 
 const mSTP = ({ errors }) => ({
     errors: errors.session,

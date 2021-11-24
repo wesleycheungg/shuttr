@@ -7,12 +7,16 @@ class SessionForm extends React.Component{
         super(props)
         this.state = {
             username: "",
-            password: ""
+            password: "",
+            email: "",
+            full_name: ""
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.updateUsername = this.updateUsername.bind(this)
         this.updatePassword = this.updatePassword.bind(this)
+        this.updateEmail = this.updateEmail.bind(this)
+        this.updateFullname = this.updateFullname.bind(this)
     }
 
     handleSubmit(e){
@@ -33,40 +37,111 @@ class SessionForm extends React.Component{
         })
     }
 
+    updateEmail(e) {
+        this.setState({
+            email: e.target.value
+        })
+    }
+
+    updateFullname(e) {
+        this.setState({
+            full_name: e.target.value
+        })
+    }
+
     render(){
-        return(
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <h1>
-                        {this.props.formType}
-                    </h1>
-                    <div>
-                        {this.props.errors[0]}
-                    </div>
-                    <br />
-                    <div>
+        const type = this.props.formType
+        const form = type === "Log In" ? 
+            <form onSubmit={this.handleSubmit}>
+                <h1>
+                    {this.props.formType}
+                </h1>
+                <div>
+                    {this.props.errors[0]}
+                </div>
+                <br />
+                <div>
+                    <label> Username
                         <input
                             type="text"
-                            value="this.state.username"
+                            // value="this.state.username"
                             onChange={this.updateUsername}
                             placeholder="Username"
                         ></input>
+                    </label>
+                    <label> Password
                         <input
                             type="password"
-                            value="this.state.password"
+                            // value="this.state.password"
                             onChange={this.updatePassword}
+                            placeholder="Password"
+                        ></input>
+                    </label>
+                </div>
+                <br />
+                <input type="submit" value={this.props.formType} />
+                <br />
+                <div>
+                    {this.props.formType === 'Sign Up' ? "Do you already have an account?" : "Don't have an account?"}
+                    <div>{this.props.link}</div>
+                </div>
+
+            </form>:
+            <form onSubmit={this.handleSubmit}>
+                <h1>
+                    {this.props.formType}
+                </h1>
+                <div>
+                    {this.props.errors[0]}
+                </div>
+                <br />
+                <div>
+                    <label> Username
+                        <input
+                            type="text"
+                            // value="this.state.username"
+                            onChange={this.updateUsername}
                             placeholder="Username"
                         ></input>
-                    </div>
-                    <br />
-                    <input type="submit" value={this.props.formType}/>
-                    <br />
-                    <div>
-                        {this.props.formType === 'Sign Up' ? "Do you already have an account?" : "Don't have an account?"}
-                        <div>{this.props.link}</div>
-                    </div>
+                    </label>
+                    <label> Password
+                        <input
+                            type="password"
+                            // value="this.state.password"
+                            onChange={this.updatePassword}
+                            placeholder="Password"
+                        ></input>
+                    </label>
+                    <label> Email
+                        <input
+                            type="text"
+                            // value="this.state.password"
+                            onChange={this.updateEmail}
+                            placeholder="Email"
+                        ></input>
+                    </label>
+                    <label> Full Name
+                        <input
+                            type="text"
+                            // value="this.state.password"
+                            onChange={this.updateFullname}
+                            placeholder="Fullname"
+                        ></input>
+                    </label>
+                </div>
+                <br />
+                <input type="submit" value={this.props.formType} />
+                <br />
+                <div>
+                    {this.props.formType === 'Sign Up' ? "Do you already have an account?" : "Don't have an account?"}
+                    <div>{this.props.link}</div>
+                </div>
 
-                </form>
+            </form>
+        return(
+            <div>
+                {form}
+                {console.log(type)}
             </div>
         )
     }
