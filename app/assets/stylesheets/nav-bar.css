@@ -1,0 +1,78 @@
+.nav-bar-1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+nav {
+    background-color: lightgray;
+}
+
+.login{
+    padding-right: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.logo{
+    margin-right: auto;
+    text-decoration: none;
+    color: black;
+}
+
+
+.signup{
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none; 
+    color: black;
+}
+
+.loginButton{
+    padding: 5px;
+    background-color: lightgray;
+    border: none;
+}
+
+.logoButton{
+    margin-right: auto;
+    padding: 5px;
+    background-color: lightgray;
+    border: none;
+}
+
+.signupButton{
+    padding: 5px;
+    margin-right: 10px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.signupButton:hover {
+    background-color: lightgray;
+}
+
+
+.demoButton{
+    padding: 5px;
+    margin-right: 10px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.demoButton:hover {
+    background-color: lightgray;
+}
+
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+    padding-left: 10px;
+}

@@ -21,13 +21,14 @@ const Greeting = ({currentUser, logout, login}) => {
 
 
     const loggedOutView = () => (
-        <nav>
-            <Link className="login" to="/login">Log In</Link>
-            <br></br>
-            <Link className="signup" to="/signup">Sign Up</Link>
-            <br></br>
-            <button onClick={handleClick}>DEMO LOGIN</button>
-        </nav>
+        <div className="nav-container">
+            <nav className="nav-bar-1">
+                <button className="logoButton"><Link className="logo" to="/">Shuttr</Link></button>
+                <button className="loginButton"><Link className="login" to="/login">Log In</Link></button>
+                <button className="signupButton"><Link className="signup" to="/signup">Sign Up</Link></button>
+                <button className="demoButton" onClick={handleClick}>DEMO LOGIN</button>
+            </nav>
+        </div>
     )
 
     return currentUser ? loggedInView() : loggedOutView();
