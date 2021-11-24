@@ -11,7 +11,7 @@ const Greeting = ({currentUser, logout, login}) => {
     }
 
     const handleClick = () => {
-        let demoUser = {username: "TEST1", password: "password"}
+        let demoUser = {username: "demo", password: "password"}
         login(demoUser)
     }
 

@@ -13,8 +13,8 @@ const App = () => (
         <header>
             <GreetingContainter />
         </header>
-        <Route path="/" component={HomeContainer}></Route>
 
+        <Route exact path="/" component={HomeContainer} />
         <div>
             <AuthRoute path='/login' component={LoginFormContainer} />
             <AuthRoute path='/signup' component={SignupFormContainer} />
