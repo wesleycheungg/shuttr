@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Greeting = ({currentUser, logout, login}) => {
+const Greeting = ({ currentUser, logout, login, removeSessionErrors}) => {
 
     const handleSubmit = () => {
         logout()
@@ -18,12 +18,16 @@ const Greeting = ({currentUser, logout, login}) => {
         <Link className="logout" onClick={handleSubmit} to="/">Log Out</Link>
     )
 
+    const handleError = () => {
+        removeSessionErrors
+    }
+
 
     const loggedOutView = () => (
             <nav className="nav-bar-1">
                 <Link className="logo" to="/">Shuttr</Link>
                 <Link className="login" to="/login">Log In</Link>
-                <button className="signupButton"><Link className="signup" to="/signup">Sign Up</Link></button>
+                <button className="signupButton" onClick={handleError}><Link className="signup" to="/signup">Sign Up</Link></button>
                 <button className="demoButton" onClick={handleClick}>DEMO LOGIN</button>
             </nav>
     )

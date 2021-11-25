@@ -53,40 +53,43 @@ class SessionForm extends React.Component{
         const loggedIn = this.props.sessionId ? <Redirect to="/feed" /> : null
         const type = this.props.formType
         const form = type === "Log In" ?
-            <form className="form-container-login" onSubmit={this.handleSubmit}>
-                <h1>
-                    Log In to Flickr
-                </h1>
-                <br />
-                <div>
+                <form className="form-container-login" onSubmit={this.handleSubmit}>
+                <h1 className="form-container-header">
+                        Log In to Flickr
+                    </h1>
+                    <br />
+                    <div>
                         <input
                             type="text"
+                            className="session-form-fields"
                             // value="this.state.username"
                             onChange={this.updateUsername}
                             placeholder="Username"
                         ></input>
-                    <br />
+                        <br />
                         <input
                             type="password"
+                            className="session-form-fields"
                             // value="this.state.password"
                             onChange={this.updatePassword}
                             placeholder="Password"
                         ></input>
-                </div>
-                <br />
-                <input type="submit" value={this.props.formType} />
-                <br />
-                <div className="error-message">
-                    {this.props.errors[0]}
-                </div>
-                <div>
-                    {this.props.formType === 'Sign Up' ? "Do you already have an account?" : "Don't have an account?"}
-                    <div>{this.props.link}</div>
-                </div>
+                    </div>
+                    <br />
+                    <input className="session-form-submit-button" type="submit" value={this.props.formType} />
+                    <br />
+                    <div className="error-message">
+                        {this.props.errors[0]}
+                    </div>
+                    <div className="session-container-message">
+                        {this.props.formType === 'Sign Up' ? "Do you already have an account?" : "Don't have an account?"}
+                    </div>
+                        <div>{this.props.link}</div>
 
-            </form>:
+                </form>
+            :
             <form className="form-container-signup" onSubmit={this.handleSubmit}>
-                <h1>
+                <h1 className="form-container-header">
                     Sign up for Flickr
                 </h1>
                 <br />
@@ -94,42 +97,46 @@ class SessionForm extends React.Component{
                         <input
                             type="text"
                             // value="this.state.username"
+                            className="session-form-fields"
                             onChange={this.updateUsername}
                             placeholder="Username"
                         ></input>
                         <input
                             type="password"
+                            className="session-form-fields"
                             // value="this.state.password"
                             onChange={this.updatePassword}
                             placeholder="Password"
                         ></input>
                         <input
                             type="text"
+                            className="session-form-fields"
                             // value="this.state.password"
                             onChange={this.updateEmail}
                             placeholder="Email"
                         ></input>
                         <input
                             type="text"
+                            className="session-form-fields"
                             // value="this.state.password"
                             onChange={this.updateFullname}
                             placeholder="Full Name"
                         ></input>
                 </div>
                 <br />
-                <input type="submit" value={this.props.formType} />
+                <input className="session-form-submit-button" type="submit" value={this.props.formType} />
                 <br />
                 <div className="error-message">
                     {this.props.errors[0]}
                 </div>
-                <div>
-                    {this.props.formType === 'Sign Up' ? "Already a Shuttr Member?" : "Don't have an account?"}
-                    <div>{this.props.link}</div>
+                <div className="session-container-message">
+                    {this.props.formType === 'Sign Up' ? "Already a Shuttr Member?"  : "Don't have an account?"}
                 </div>
+                    <div>{this.props.link}</div>
 
             </form>
         return(
-            <div>
+            <div className="session-container">
                 {loggedIn}
                 {form}
                 {console.log(type)}
