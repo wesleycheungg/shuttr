@@ -14,12 +14,42 @@
     text-align: center;
     margin: 0 auto;
     height: 100%;
-    padding-top: 250px;
+    padding-top: 225px;
     color: white
     
 }
 
 .homepage-text h1 {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     font-size: 45px;
     font-weight: 300;
+}
+
+.homepage p {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    padding: 30px;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+
+.start-for-free-btn {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    border: none;
+    border-radius: 2px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 18px;
+    font-weight: 480;
+}
+
+.start-for-free-btn:hover {
+    background-color: lightgray;
+}
+
+.free-btn {
+    text-decoration: none; 
+    color: black;
 }

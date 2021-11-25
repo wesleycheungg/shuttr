@@ -7,7 +7,7 @@
     position: absolute;
     background: white;
     text-align: center;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
@@ -20,7 +20,7 @@
     position: absolute;
     background: #FFFFFF;
     text-align: center;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
@@ -29,6 +29,9 @@
 .error-message {
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     color: red;
+    padding: 3px;
+    margin-top: 5px;
+    font-size: 11px;
 }
 
 .session-container {

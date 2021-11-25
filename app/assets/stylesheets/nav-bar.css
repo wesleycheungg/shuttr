@@ -15,7 +15,8 @@ nav {
     padding-right: 10px;
     margin-right: 10px;
     text-decoration: none;
-    color: white
+    color: white;
+    font-size: 12px;
 }
 
 .logo{
@@ -34,18 +35,19 @@ nav {
     margin-right: 5px;
     text-decoration: none; 
     color: black;
+    font-size: 12px;
 }
 
 .loginButton{
     padding: 5px;
-    background-color: lightgray;
+    background-color: white;
     border: none;
 }
 
 .logoButton{
     margin-right: auto;
     padding: 5px;
-    background-color: lightgray;
+    background-color: white;
     border: none;
 }
 
@@ -73,6 +75,7 @@ nav {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    font-size: 12px;
 }
 
 .demoButton:hover {
