@@ -3,22 +3,24 @@
     align-items: center;
     justify-content: flex-end;
     padding: 5px;
+    position:relative;
 }
 
 nav {
-    background-color: lightgray;
+    background-color: black;
+    opacity: 70%
 }
 
 .login{
     padding-right: 10px;
     text-decoration: none;
-    color: black;
+    color: white
 }
 
 .logo{
     margin-right: auto;
     text-decoration: none;
-    color: black;
+    color: white
 }
 
 

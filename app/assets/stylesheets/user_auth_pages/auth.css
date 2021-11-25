@@ -8,6 +8,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
+    
 }
 
 .form-container-signup{
@@ -20,4 +21,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
+}
+
+.error-message {
+    color: red;
 }

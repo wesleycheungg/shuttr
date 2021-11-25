@@ -4,10 +4,12 @@ import { login, signup, remove } from '../../actions/session_actions';
 import SessionForm from './session_form'
 import { Link } from 'react-router-dom';
 
-const mSTP = ({errors}) => ({
+const mSTP = ({errors, session}) => ({
     errors: errors.session,
     formType: 'Sign Up',
-    link: <Link to='/login'>Click here to Log In.</Link>
+    link: <Link to='/login'>Click here to Log In.</Link>,
+    sessionId: session.id
+    
 })
 
 const mDTP = (dispatch) => ({

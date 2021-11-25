@@ -50,15 +50,13 @@ class SessionForm extends React.Component{
     }
 
     render(){
+        const loggedIn = this.props.sessionId ? <Redirect to="/feed" /> : null
         const type = this.props.formType
-        const form = type === "Log In" ? 
+        const form = type === "Log In" ?
             <form className="form-container-login" onSubmit={this.handleSubmit}>
                 <h1>
                     Log In to Flickr
                 </h1>
-                <div>
-                    {this.props.errors[0]}
-                </div>
                 <br />
                 <div>
                         <input
@@ -78,6 +76,9 @@ class SessionForm extends React.Component{
                 <br />
                 <input type="submit" value={this.props.formType} />
                 <br />
+                <div className="error-message">
+                    {this.props.errors[0]}
+                </div>
                 <div>
                     {this.props.formType === 'Sign Up' ? "Do you already have an account?" : "Don't have an account?"}
                     <div>{this.props.link}</div>
@@ -88,9 +89,6 @@ class SessionForm extends React.Component{
                 <h1>
                     Sign up for Flickr
                 </h1>
-                <div>
-                    {this.props.errors[0]}
-                </div>
                 <br />
                 <div>
                         <input
@@ -115,12 +113,15 @@ class SessionForm extends React.Component{
                             type="text"
                             // value="this.state.password"
                             onChange={this.updateFullname}
-                            placeholder="Fullname"
+                            placeholder="Full Name"
                         ></input>
                 </div>
                 <br />
                 <input type="submit" value={this.props.formType} />
                 <br />
+                <div className="error-message">
+                    {this.props.errors[0]}
+                </div>
                 <div>
                     {this.props.formType === 'Sign Up' ? "Already a Shuttr Member?" : "Don't have an account?"}
                     <div>{this.props.link}</div>
@@ -129,6 +130,7 @@ class SessionForm extends React.Component{
             </form>
         return(
             <div>
+                {loggedIn}
                 {form}
                 {console.log(type)}
             </div>
