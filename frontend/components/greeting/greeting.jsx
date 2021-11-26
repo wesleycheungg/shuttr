@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Greeting = ({ currentUser, logout, login, removeSessionErrors}) => {
+const Greeting = ({ currentUser, logout, login }) => {
 
     const handleSubmit = () => {
         logout()

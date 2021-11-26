@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 class SessionForm extends React.Component{
     constructor(props){
         super(props)
@@ -17,6 +15,10 @@ class SessionForm extends React.Component{
         this.updatePassword = this.updatePassword.bind(this)
         this.updateEmail = this.updateEmail.bind(this)
         this.updateFullname = this.updateFullname.bind(this)
+    }
+
+    componentWillMount = () => {
+        this.props.removeSessionErrors();
     }
 
     handleSubmit(e){
@@ -62,7 +64,6 @@ class SessionForm extends React.Component{
                         <input
                             type="text"
                             className="session-form-fields"
-                            // value="this.state.username"
                             onChange={this.updateUsername}
                             placeholder="Username"
                         ></input>
@@ -70,13 +71,12 @@ class SessionForm extends React.Component{
                         <input
                             type="password"
                             className="session-form-fields"
-                            // value="this.state.password"
                             onChange={this.updatePassword}
                             placeholder="Password"
                         ></input>
                     </div>
                     <br />
-                    <input className="session-form-submit-button" type="submit" value={this.props.formType} />
+                    <input className="session-form-submit-button-login" type="submit" value={this.props.formType} />
                     <br />
                     <div className="error-message">
                         {this.props.errors[0]}
@@ -96,7 +96,6 @@ class SessionForm extends React.Component{
                 <div>
                         <input
                             type="text"
-                            // value="this.state.username"
                             className="session-form-fields"
                             onChange={this.updateUsername}
                             placeholder="Username"
@@ -104,27 +103,24 @@ class SessionForm extends React.Component{
                         <input
                             type="password"
                             className="session-form-fields"
-                            // value="this.state.password"
                             onChange={this.updatePassword}
                             placeholder="Password"
                         ></input>
                         <input
                             type="text"
                             className="session-form-fields"
-                            // value="this.state.password"
                             onChange={this.updateEmail}
                             placeholder="Email"
                         ></input>
                         <input
                             type="text"
                             className="session-form-fields"
-                            // value="this.state.password"
                             onChange={this.updateFullname}
                             placeholder="Full Name"
                         ></input>
                 </div>
                 <br />
-                <input className="session-form-submit-button" type="submit" value={this.props.formType} />
+                <input className="session-form-submit-button-signup" type="submit" value={this.props.formType} />
                 <br />
                 <div className="error-message">
                     {this.props.errors[0]}
