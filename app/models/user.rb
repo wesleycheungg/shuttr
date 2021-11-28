@@ -9,9 +9,9 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
-    # has_many :photos
-    # has_many :albums
-    # has_many :tags
+    has_many :photos
+    has_many :albums
+    has_many :tags
 
     #SPIRE
 

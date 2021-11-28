@@ -1,10 +1,10 @@
 class Photo < ApplicationRecord
-    validates :photos, :user_id, presence: true
+    validates :user_id, presence: true
 
-    belongs_to :user,
-        foreign_key: :user_id,
-        class_name: "User"
+    belongs_to :user
 
     has_many :comments
+
+    has_one_attached :photo
 
 end
