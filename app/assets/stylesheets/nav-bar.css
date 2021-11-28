@@ -96,3 +96,21 @@ nav {
     margin-right: auto;
     padding-left: 10px;
 }
+
+.greeting{
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    padding-right: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+.profile{
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    padding-right: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}

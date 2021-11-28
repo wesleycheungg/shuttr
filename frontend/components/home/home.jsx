@@ -10,7 +10,6 @@ class Home extends React.Component{
     loggedInView = () => {
         return(
             <div>
-                <h1>PhotoStream Page!</h1>
                 <PhotoIndexContainer />
             </div>
 

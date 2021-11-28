@@ -18,8 +18,8 @@ class PhotoIndex extends React.Component {
         })
         return(
             <div>
-                <h1>This is the Photostream</h1>
-                <div>
+                <h1 className="photo-index-header">Explore</h1>
+                <div className="photo-index-container">
                     {photos}
                 </div>
 
