@@ -6,17 +6,21 @@ class PhotoIndex extends React.Component {
         super(props)
     }
 
+    componentDidMount() {
+        this.props.fetchAllPhotos()
+    }
+
     render () {
-        let images = this.props.photos.map( image => {
+        let photos = this.props.photos.map( photo => {
             return (
-                <PhotoIndexItem key={image.id} photo={image} />
+                <PhotoIndexItem key={photo.id} photo={photo} />
             )
         })
         return(
             <div>
                 <h1>This is the Photostream</h1>
                 <div>
-                    {images}
+                    {photos}
                 </div>
 
             </div>
