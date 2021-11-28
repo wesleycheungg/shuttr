@@ -19,6 +19,15 @@ nav {
     font-size: 12px;
 }
 
+.logout{
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    padding-right: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
 .logo{
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     margin-right: auto;

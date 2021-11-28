@@ -15,7 +15,10 @@ const Greeting = ({ currentUser, logout, login }) => {
     }
 
     const loggedInView = () => (
-        <Link className="logout" onClick={handleSubmit} to="/">Log Out</Link>
+        <nav className="nav-bar-1">
+            <Link className="logo" to="/">Shuttr</Link>
+            <Link className="logout" onClick={handleSubmit} to="/">Log Out</Link>
+        </nav>
     )
     
     const loggedOutView = () => (

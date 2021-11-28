@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Home from './home'
 
 const mSTP = (state) => ({
-    
+    currentUser: state.entities.users[state.session.currentUserId]
 })
 
 const mDTP = (dispatch) => ({

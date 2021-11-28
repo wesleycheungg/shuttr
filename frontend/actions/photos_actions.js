@@ -22,7 +22,7 @@ const removePhoto = (photoId) => ({
 
 export const fetchAllPhotos = () => (dispatch) => {
     return PhotoAPIUtil.fetchAllPhotos()
-        .then((photos) => dispatch(receiveAllPhotos(photos)))
+        .then(() => dispatch(receiveAllPhotos()))
 } 
 
 export const fetchPhoto = (photo) => (dispatch) => {
