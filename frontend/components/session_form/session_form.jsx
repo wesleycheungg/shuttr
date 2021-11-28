@@ -123,7 +123,14 @@ class SessionForm extends React.Component{
                 <input className="session-form-submit-button-signup" type="submit" value={this.props.formType} />
                 <br />
                 <div className="error-message">
-                    {this.props.errors}
+                    {this.props.errors.map( error => {
+                        return (
+                            <div>
+                                {error}
+                                <br></br>
+                            </div>
+                        )
+                    })}
                 </div>
                 <div className="session-container-message">
                     {this.props.formType === 'Sign Up' ? "Already a Shuttr Member?"  : "Don't have an account?"}
