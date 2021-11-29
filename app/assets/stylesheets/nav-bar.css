@@ -103,10 +103,20 @@ nav {
     margin-right: 10px;
     text-decoration: none;
     color: white;
-    font-size: 12px;
+    font-size: 15px;
+    padding-bottom: 3px;
 }
 
 .profile{
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    padding-right: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+.upload{
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     padding-right: 10px;
     margin-right: 10px;

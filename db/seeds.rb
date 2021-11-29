@@ -10,13 +10,3 @@ User.create(username: "wcheung", email: "wcheung@gmail.com", full_name: "Wesley 
 User.create(username: "wesleycheungg", email: "wesleycheung1998@gmail.com", full_name: "Wes Cheung", password: "password")
 User.create(username: "test", email: "test@gmail.com", full_name: "Test", password: "bad")
 
-Photo.create(user_id: 6, img_url: "m1.jpg")
-Photo.create(user_id: 6, img_url: "m2.jpg")
-Photo.create(user_id: 6, img_url: "m3.jpg")
-Photo.create(user_id: 6, img_url: "m4.jpg")
-Photo.create(user_id: 1, img_url: "m5.jpg")
-Photo.create(user_id: 2, img_url: "m6.jpg")
-Photo.create(user_id: 2, img_url: "m7.jpg")
-Photo.create(user_id: 3, img_url: "m8.jpg")
-Photo.create(user_id: 6, img_url: "m9.jpg")
-Photo.create(user_id: 1, img_url: "m10.jpg")

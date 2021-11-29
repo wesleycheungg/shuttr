@@ -17,7 +17,8 @@ const Greeting = ({ currentUser, logout, login }) => {
     const loggedInView = () => (
         <nav className="nav-bar-1">
             <Link className="logo" to="/">Shuttr</Link>
-            <p classNam="greeting">Hi, Demo</p>
+            <p className="greeting">Hi, {currentUser.full_name}</p>
+            <Link className="upload" to="/new">Upload</Link>
             <Link className="profile" onClick={handleSubmit} to="/">Profile</Link>
             <Link className="logout" onClick={handleSubmit} to="/">Log Out</Link>
         </nav>

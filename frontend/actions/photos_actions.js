@@ -32,14 +32,16 @@ export const fetchAllPhotos = () => (dispatch) => {
             errors => dispatch(receivePhotoErrors(errors.responseJSON)))
 } 
 
-export const fetchPhoto = (photo) => (dispatch) => {
-    return PhotoAPIUtil.fetchPhoto(photo)
-        .then((photo) => receivePhoto(photo))
+export const fetchPhoto = (id) => (dispatch) => {
+    return PhotoAPIUtil.fetchPhoto(id)
+        .then((photo) => dispatch(receivePhoto(photo)),
+            errors => dispatch(receivePhotoErrors(errors.responseJSON)))
 }
 
 export const createPhoto = (photo) => (dispatch) => {
     return PhotoAPIUtil.createPhoto(photo)
-        .then((createP) => receivePhoto(createP))
+        .then((createP) => dispatch(receivePhoto(createP)),
+            errors => dispatch(receivePhotoErrors(errors.responseJSON)))
 }
 
 export const deletePhoto = (id) => (dispatch) => {

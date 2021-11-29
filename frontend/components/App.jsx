@@ -4,6 +4,8 @@ import GreetingContainter from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container'
 import SignupFormContainer from './session_form/signup_form_container'
 import HomeContainer from './home/home_container'
+import PhotoShowContainer from './photo/photo_show_container';
+import PhotoCreateContainer from './photo/photo_create_container'
 
 import PhotoIndex from './photo/photo_index_aws';
 import Form from './form';
@@ -15,7 +17,11 @@ const App = () => (
     <div>
         <GreetingContainter />
 
-        <Route path="/" component={HomeContainer} />
+        <Switch>
+            <Route path="/photos/:id" component={PhotoShowContainer} />
+            <Route path="/new" component={PhotoCreateContainer} />
+            <Route path="/" component={HomeContainer} />
+        </Switch>
         <AuthRoute path='/login' component={LoginFormContainer} />
         <AuthRoute path='/signup' component={SignupFormContainer} />
 

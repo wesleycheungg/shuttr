@@ -1,4 +1,5 @@
-import { RECEIVE_ALL_PHOTOS } from "../actions/photos_actions";
+import React from "react";
+import { RECEIVE_ALL_PHOTOS, RECEIVE_PHOTO } from "../actions/photos_actions";
 
 const photoReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
@@ -7,6 +8,9 @@ const photoReducer = (oldState = {}, action) => {
     switch (action.type) {
         case RECEIVE_ALL_PHOTOS:
             return action.photos;
+        case RECEIVE_PHOTO:
+            nextState[action.photo.id] = action.photo;
+            return nextState
         default:
             return oldState;
     }

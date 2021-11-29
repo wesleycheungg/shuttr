@@ -8,7 +8,7 @@ const mSTP = (state) => ({
 })
 
 const mDTP = (dispatch) => ({
-    fetchAllPhotos: () => dispatch(fetchAllPhotos())
+    fetchAllPhotos: () => dispatch(fetchAllPhotos()),
 })
 
 export default connect(mSTP, mDTP)(PhotoIndex)
