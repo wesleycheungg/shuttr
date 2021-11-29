@@ -5,16 +5,20 @@ class PhotoShow extends React.Component{
         super(props)
     }
 
-    componenetDidMount() {
+    componentDidMount() {
         this.props.fetchPhoto(this.props.photoId)
     }
 
     render() {
-        // const photoUrl = this.props.photo.photoUrl;
+        const photo = this.props.photo;
+
+        if (!photo) {
+            return null;
+        }
         return(
-            <div>
+            <div className="photo-show-container">
                 <p>photo show page</p>
-                <img className="photo-show-img" alt=""></img>
+                <img className="photo-show-img" src={photo.photoUrl} alt=""></img>
             </div>
         )
     }
