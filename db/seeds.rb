@@ -16,7 +16,7 @@ user3 = User.create(username: "test", email: "test@gmail.com", full_name: "Test"
 user4 =User.create(username: "demo", email: "demo@gmail.com", full_name: "Demo User", password: "password")
 
 p1 = Photo.create(user_id: user1.id, img_url: "m1.jpg")
-photo1 = open("https://shuttr-dev.s3.us-west-1.amazonaws.com/pBn26WM2vsG26FejC42KNDa7.jpg")
+photo1 = open("https://shuttr-dev.s3.us-west-1.amazonaws.com/pBn26WM2vsG26FejC42KNDa7")
 p1.photo.attach(io: photo1, filename: "m1.jpg")
 
 # p2 = Photo.create(user_id: user4.id, img_url: "m2.jpg")
