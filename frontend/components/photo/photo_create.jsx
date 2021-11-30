@@ -36,6 +36,7 @@ class PhotoCreate extends React.Component {
         if (this.state.photoFile) {
             formData.append('photo[photo]', this.state.photoFile);
         }
+        debugger
         $.ajax({
             url: '/api/photos',
             method: 'POST',

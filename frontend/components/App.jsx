@@ -6,6 +6,7 @@ import SignupFormContainer from './session_form/signup_form_container'
 import HomeContainer from './home/home_container'
 import PhotoShowContainer from './photo/photo_show_container';
 import PhotoCreateContainer from './photo/photo_create_container'
+import UserPhotoIndexContainer from './profile/user_photo_index_container'
 
 import PhotoIndex from './photo/photo_index_aws';
 import Form from './form';
@@ -19,6 +20,7 @@ const App = () => (
 
         <Switch>
             <Route path="/photos/:id" component={PhotoShowContainer} />
+            <Route path="/users/:id/photos" component={UserPhotoIndexContainer} />
             <Route path="/new" component={PhotoCreateContainer} />
             <Route path="/" component={HomeContainer} />
         </Switch>
