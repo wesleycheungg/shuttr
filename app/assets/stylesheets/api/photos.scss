@@ -22,7 +22,7 @@
 .photo-items img {
     display: block;
     min-width: 100%;
-    height: 200px;
+    height: 150px;
     object-fit: cover;
     transition-duration: 300ms;
 }
@@ -36,15 +36,43 @@
 }
 
 .photo-show-container {
+    background-color: #212123;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 30px;
 }
 
 .photo-show-img {
     display: block;
-    height: 200px;
-    width: 300px;
-    
+    max-height: 460px;
+    max-width: 60%;
+    padding-top: 30px;
+}
+
+.preview-img {
+    display: block;
+    max-height: 460px;
+    max-width: 60%;
+    padding-top: 30px;
+}
+
+.upload-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choose-photo-btn {
+    margin-top: 100px;
+}
+
+.upload-container-box {
+
+}
+
+.upload-photo-btn {
+    margin-top: 40px;
 }

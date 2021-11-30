@@ -19,7 +19,8 @@ class Api::PhotosController < ApplicationController
         @photo = Photo.new(photo_params)
         @photo.user_id = current_user.id
         if @photo.save
-            render json: {message: "You did it"}
+            render :show
+            # render json: {message: "You did it"}
         else
             render json: @photo.errors.full_messages, status: 422
         end
@@ -35,6 +36,6 @@ class Api::PhotosController < ApplicationController
     # end
 
     def photo_params
-        params.require(:photo).permit(:user_id, :img_url)
+        params.require(:photo).permit(:user_id, :img_url, :photo)
     end
 end

@@ -7,7 +7,7 @@
 }
 
 nav {
-    background-color: #212124;
+    background-color: #161618;
 }
 
 .login{
@@ -123,4 +123,9 @@ nav {
     text-decoration: none;
     color: white;
     font-size: 12px;
+}
+
+.upload-img {
+    height: 30px;
+    width: 30px;
 }

@@ -17,7 +17,6 @@ class PhotoShow extends React.Component{
         }
         return(
             <div className="photo-show-container">
-                <p>photo show page</p>
                 <img className="photo-show-img" src={photo.photoUrl} alt=""></img>
             </div>
         )
