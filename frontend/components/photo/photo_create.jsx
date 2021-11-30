@@ -23,11 +23,6 @@ class PhotoCreate extends React.Component {
         }
     }
 
-    handleClick(e) {
-        e.preventDefault();
-        this.props.history.push("/")
-    }
-
     handleSubmit(e) {
         e.preventDefault();
         const formData = new FormData();
@@ -43,7 +38,7 @@ class PhotoCreate extends React.Component {
             contentType: false,
             processData: false
         }).then(
-            (response) => console.log(response.message),
+            (response) => this.props.history.push("/"),
             (response) => {
                 console.log(response.responseJSON)
             }
@@ -59,7 +54,7 @@ class PhotoCreate extends React.Component {
                     <input className="choose-photo-btn" type="file" 
                         onChange={this.handleFile.bind(this)} />
                     {preview}
-                    <button className="upload-photo-btn" onClick={this.handleClick.bind(this)}>Upload Photo</button>
+                    <button className="upload-photo-btn">Upload Photo</button>
                 </form>
             </div>
         )
