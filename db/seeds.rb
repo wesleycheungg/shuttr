@@ -26,7 +26,7 @@ p2.photo.attach(io: photo2, filename: "m2.jpg")
 
 p3 = Photo.create(user_id: 3, img_url: "m3.jpg")
 photo3 = URI.open("https://shuttr-dev.s3.us-west-1.amazonaws.com/T4ngmFXHCZTE8KN1JopyPSdx")
-p3.photo.attach(io: photo3), filename: "m3.jpg")
+p3.photo.attach(io: photo3, filename: "m3.jpg")
 
 p4 = Photo.create(user_id: 3, img_url: "m4.jpg")
 photo4 = URI.open("https://shuttr-dev.s3.us-west-1.amazonaws.com/NECDRowXRnRN2ex6BBw75UVA")
@@ -38,5 +38,5 @@ p5.photo.attach(io: photo5, filename: "m5.jpg")
 
 p6 = Photo.create(user_id: 1, img_url: "m6.jpg")
 photo6 = URI.open("https://shuttr-dev.s3.us-west-1.amazonaws.com/2epnkeUcPMSKYE8RJw8WDiEG")
-p6.photo.attach(io: photo6), filename: "m6.jpg")
+p6.photo.attach(io: photo6, filename: "m6.jpg")
 
