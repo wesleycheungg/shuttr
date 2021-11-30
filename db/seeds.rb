@@ -16,7 +16,8 @@ user3 = User.create(username: "test", email: "test@gmail.com", full_name: "Test"
 user4 =User.create(username: "demo", email: "demo@gmail.com", full_name: "Demo User", password: "password")
 
 p1 = Photo.new(user_id: user1.id, img_url: "m1.jpg")
-photo1 = open("https://shuttr-dev.s3.us-west-1.amazonaws.com/pBn26WM2vsG26FejC42KNDa7")
+# photo1 = open("https://shuttr-dev.s3.us-west-1.amazonaws.com/pBn26WM2vsG26FejC42KNDa7")
+photo1 = open("/Users/wes/Desktop/shuttr/app/assets/images/mountain_landscape/m1.jpg")
 p1.photo.attach(io: photo1, filename: "m1.jpg")
 p1.save
 
