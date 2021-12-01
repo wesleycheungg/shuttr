@@ -5,7 +5,7 @@ const UserAlbumIndexItem = (props) => {
     return (
         <div className="album-items">
             <li>
-                <Link className="album-item-link" to="/">{props.album.title}</Link>
+                <Link className="album-item-link" to={`/albums/${props.album.id}`}>{props.album.title}</Link>
             </li>
         </div>
     )

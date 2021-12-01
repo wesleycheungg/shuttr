@@ -1,15 +1,15 @@
 class Api::AlbumsController < ApplicationController
     def index
-        @albums = Album.all
-        render :index
+        # @albums = Album.all
+        # render :index
 
-        # if current_user.id
-        #     @albums = Album.all.select{ |album| album.user_id.to_s === current_user.id}
-        #     @user = User.find_by(id: params[:user_id])
-        #     render :index
-        # else
-        #     @albums = nil
-        # end
+        if current_user.id
+            @albums = Album.all.select{ |album| album.user_id === current_user.id}
+            @user = User.find_by(id: params[:user_id])
+            render :index
+        else
+            @albums = nil
+        end
 
         # @albums = Album.where(user_id: params[:user_id]).includes(:user)
     end
@@ -33,6 +33,9 @@ class Api::AlbumsController < ApplicationController
     def show
         @album = Album.find(params[:id])
         if @album
+            # @photos = @album.photos
+            @user = User.find_by(id: @album.user_id)
+            # debugger
             render :show
         else
             render json: ["there is no album with that id"]

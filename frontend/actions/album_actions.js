@@ -1,22 +1,5 @@
 import * as AlbumAPIUtil from '../util/album_api_util';
 
-//test
-export const RECEIVE_ALBUMS = 'RECEIVE_ALBUMS'
-
-const receiveAlbums = (albums) => ({
-    type: RECEIVE_ALBUMS,
-    albums
-})
-
-export const fetchAlbums = (id) => (dispatch) => {
-    return AlbumAPIUtil.fetchAlbums(id)
-        .then(
-            (albums) => dispatch(receiveAlbums(albums))
-        )
-}
-
-
-
 export const RECEIVE_USER_ALBUMS = 'RECEIVE_USER_ALBUMS'
 export const RECEIVE_ALBUM = 'RECEIVE_ALBUM'
 export const REMOVE_ALBUM = 'REMOVE_ALBUM'
@@ -66,3 +49,21 @@ export const deleteAlbum = (id) => (dispatch) => {
             (id) => (dispatch(removeAlbum(id)))
         )
 }
+
+
+
+//test
+export const RECEIVE_ALBUMS = 'RECEIVE_ALBUMS'
+
+const receiveAlbums = (albums) => ({
+    type: RECEIVE_ALBUMS,
+    albums
+})
+
+export const fetchAlbums = (id) => (dispatch) => {
+    return AlbumAPIUtil.fetchAlbums(id)
+        .then(
+            (albums) => dispatch(receiveAlbums(albums))
+        )
+}
+//------------------------------------------------------
