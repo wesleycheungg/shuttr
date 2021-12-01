@@ -1,5 +1,5 @@
 import React from 'react';
-import { RECEIVE_USER_ALBUMS, RECEIVE_ALBUM, REMOVE_ALBUM } from '../actions/album_actions';
+import { RECEIVE_USER_ALBUMS, RECEIVE_ALBUM, REMOVE_ALBUM, RECEIVE_ALBUMS } from '../actions/album_actions';
 
 const albumReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
@@ -8,6 +8,8 @@ const albumReducer = (oldState = {}, action) => {
     switch (action.type) {
         case RECEIVE_USER_ALBUMS:
             return action.albums;
+        // case RECEIVE_ALBUMS:
+        //     return action.albums;
         case RECEIVE_ALBUM:
             nextState[action.album.id] = action.album;
             return nextState;

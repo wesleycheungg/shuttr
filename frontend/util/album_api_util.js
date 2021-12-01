@@ -6,6 +6,17 @@ export const fetchUserAlbums = (userId) => (
     })
 )
 
+//albums#index (not under users)
+export const fetchAlbums = (id) => (
+    $.ajax({
+        method: 'GET',
+        url: `api/albums`,
+        data: {
+            user_id: id
+        }
+    })
+)
+
 //albums#show
 export const fetchAlbum = (id) => (
     $.ajax({

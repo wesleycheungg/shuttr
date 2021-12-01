@@ -14,7 +14,8 @@ class UserPhotoIndex extends React.Component {
                 </div>
                 <Link to="/">Photostream</Link>
                 <br></br>
-                <Link to="/">Albums</Link>
+                <Link to={`/users/${this.props.userId}/albums`}>Albums</Link>
+                {/* <Link to={`/albums`}>Albums</Link> */}
                 <div className="user-index-container">TEST</div>
             </div>
         )

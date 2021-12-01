@@ -13,6 +13,6 @@ Rails.application.routes.draw do
 
     resources :photos, only: [:index, :show, :create, :destroy]
 
-    resources :albums, only: [:create, :show, :destroy, :update]
+    resources :albums, only: [:index, :create, :show, :destroy, :update]
   end
 end
