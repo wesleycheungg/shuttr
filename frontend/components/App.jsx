@@ -21,6 +21,8 @@ const App = () => (
         <Switch>
             <Route path="/photos/:id" component={PhotoShowContainer} />
             <Route path="/users/:id/photos" component={UserPhotoIndexContainer} />
+            <Route path="/users/:id/albums" component={UserAlbumIndexContainer} />
+
             <Route path="/new" component={PhotoCreateContainer} />
             <Route path="/" component={HomeContainer} />
         </Switch>
