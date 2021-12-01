@@ -1,0 +1,30 @@
+.profile-container {
+    
+}
+
+.profile-nav-bar {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+
+}
+
+.profile-nav-bar-photostream {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    text-decoration: none; 
+    color: black;
+    padding-right: 20px;
+}
+
+.profile-nav-bar-albums {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    text-decoration: none; 
+    color: black;
+    padding-left: 20px;
+}
+
+.profile-body {
+    display: block;
+    margin: 200px;
+    background-color: lightgray;
+}

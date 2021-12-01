@@ -36,8 +36,8 @@ class AlbumShow extends React.Component{
         let photos = this.props.photos.map( photo => {
             return(
                 <div className="album-photos">
-                    <Link to={`/photos/${photo.id}`}>
-                        <img src={photo.photoUrl} alt=""></img>
+                    <Link  to={`/photos/${photo.id}`}>
+                        <img  src={photo.photoUrl} alt=""></img>
                     </Link>
                 </div>
             )

@@ -11,15 +11,15 @@ class UserPhotoIndex extends React.Component {
             return null;
         }
         return (
-            <div className="user-container">
-                <div>
-                    User Photo Index Page
+            <div className="profile-container">
+                <div className="profile-nav-bar">
+                    <Link className="profile-nav-bar-photostream"to="/">Photostream</Link>
+                    <Link className="profile-nav-bar-albums"to={`/users/${this.props.userId}/albums`}>Albums</Link>
                 </div>
-                <Link to="/">Photostream</Link>
-                <br></br>
-                <Link to={`/users/${this.props.userId}/albums`}>Albums</Link>
-                {/* <Link to={`/albums`}>Albums</Link> */}
-                <div className="user-index-container">TEST</div>
+
+                <div className="profile-body">
+
+                </div>
             </div>
         )
     }
