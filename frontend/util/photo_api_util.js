@@ -6,6 +6,13 @@ export const fetchAllPhotos = () => (
     })
 )
 
+export const fetchAlbumPhotos = (userId, albumId) => (
+    $.ajax({
+        method: "GET",
+        url: `/api/users/${userId}/albums/${albumId}/photos`
+    })
+)
+
 //photos#show
 export const fetchPhoto = (id) => (
     $.ajax({

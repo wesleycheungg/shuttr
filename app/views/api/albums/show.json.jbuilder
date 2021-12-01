@@ -6,10 +6,10 @@ json.user do
   json.extract! @user, :id, :full_name
 end
 
-@photos.each do |photo|
-  json.photos do
+json.photos do
+    @photos.each do |photo|
     json.set! photo.id do
-      json.extract! photo, :id, :title, :description, :user_id
+      json.extract! photo, :user_id
       json.photoUrl url_for(photo.photo)
     end
   end

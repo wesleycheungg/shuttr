@@ -25,6 +25,12 @@ const receivePhotoErrors = (errors) => ({
     errors
 })
 
+export const fetchAlbumPhotos = (userId, albumId) => (dispatch) => {
+    return PhotoAPIUtil.fetchAlbumPhotos(userId, albumId)
+        .then((photos) => dispatch(receiveAllPhotos(photos)),
+            errors => dispatch(receivePhotoErrors(errors.responseJSON)))
+}
+
 
 export const fetchAllPhotos = () => (dispatch) => {
     return PhotoAPIUtil.fetchAllPhotos()

@@ -1,8 +1,5 @@
 class Api::AlbumsController < ApplicationController
     def index
-        # @albums = Album.all
-        # render :index
-
         if current_user.id
             @albums = Album.all.select{ |album| album.user_id === current_user.id}
             @user = User.find_by(id: params[:user_id])
@@ -10,8 +7,6 @@ class Api::AlbumsController < ApplicationController
         else
             @albums = nil
         end
-
-        # @albums = Album.where(user_id: params[:user_id]).includes(:user)
     end
 
     def create
@@ -33,7 +28,7 @@ class Api::AlbumsController < ApplicationController
     def show
         @album = Album.find(params[:id])
         if @album
-            # @photos = @album.photos
+            @photos = @album.photos
             @user = User.find_by(id: @album.user_id)
             # debugger
             render :show
@@ -46,6 +41,6 @@ class Api::AlbumsController < ApplicationController
     private
 
     def album_params
-        params.require(:album).permit(:user_id, :title, :description, photo_ids: [])
+        params.require(:album).permit(:user_id, :title, :description)
     end
 end

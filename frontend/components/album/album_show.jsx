@@ -7,18 +7,20 @@ class AlbumShow extends React.Component{
 
     }
 
-    componentDidUpdate(prevProps) {
-        if (prevProps.match.params.id !== this.props.match.params.id) {
-            this.props.fetchAlbum(this.props.match.params.id);
-        }
+    // componentDidUpdate(prevProps) {
+    //     if (prevProps.match.params.id !== this.props.match.params.id) {
+    //         this.props.fetchAlbum(this.props.match.params.id);
+    //     }
 
-        if (prevProps.userId !== this.props.userId) {
-            this.props.fetchAlbum(this.props.match.params.id);
-        }
-    }
+    //     if (prevProps.userId !== this.props.userId) {
+    //         this.props.fetchAlbum(this.props.match.params.id);
+    //     }
+    // }
 
     componentDidMount(){
         this.props.fetchAlbum(this.props.albumId)
+        this.props.fetchAlbumPhotos(this.props.userId, this.props.albumId)
+
     }
 
     render(){
@@ -31,19 +33,25 @@ class AlbumShow extends React.Component{
             albumDescription = this.props.album.description;
             // user = this.props.user.full_name;
         }
-        // let photos = this.props.photos.map( photo => {
-        //     return(
-        //         <img src={photo.photoUrl} alt=""></img>
-        //     )
-        // })
+        let photos = this.props.photos.map( photo => {
+            return(
+                <div className="album-photos">
+                    <Link to={`/photos/${photo.id}`}>
+                        <img src={photo.photoUrl} alt=""></img>
+                    </Link>
+                </div>
+            )
+        })
         return(
             <div>
                 <div>
-                    <h1>Album Title: {albumTitle}</h1>
-                    <h2>Album Description: {albumDescription}</h2>
+                    <div className="album-header">
+                        <h1 className="album-title">Title: {albumTitle}</h1>
+                        <h2 className="album-description">Description: {albumDescription}</h2>
+                    </div>
                     {/* <h3>By: {user}</h3> */}
-                    <div>
-                        {/* {photos} */}
+                    <div className="album-photos-container">
+                        {photos}
                     </div>
                 </div>
             </div>

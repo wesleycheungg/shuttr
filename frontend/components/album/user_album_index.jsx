@@ -10,7 +10,7 @@ class UserAlbumIndex extends React.Component{
 
     componentDidMount() {
         this.props.fetchUserAlbums(this.props.userId)
-        console.log(this.props.userId)
+        // console.log(this.props.userId)
         // console.log(this.props.currentUser)
         // this.props.fetchAlbums(this.props.userId)
         // console.log(this.props.userId)

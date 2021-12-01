@@ -1,8 +1,14 @@
 class Api::PhotosController < ApplicationController
 
     def index
-        @photos = Photo.all
-        render :index
+        # debugger
+        if params[:album_id] 
+            @photos = Photo.where({album_id: params[:album_id]})
+            render :index
+        else
+            @photos = Photo.all
+            render :index
+        end
 
     end
 

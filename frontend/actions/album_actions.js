@@ -11,7 +11,7 @@ const receiveUserAlbums = ({ albums, users}) => ({
 })
 
 const receiveAlbum = ({ album, user, photos }) => ({
-    type: RECEIVE_USER_ALBUMS,
+    type: RECEIVE_ALBUM,
     album: album,
     user, user,
     photos: photos

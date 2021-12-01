@@ -8,7 +8,9 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show]
     resources :users do 
       resources :photos, only: [:index]
-      resources :albums, only: [:index]
+      resources :albums, only: [:index] do
+        resources :photos, only: [:index]
+      end
     end
 
     resources :photos, only: [:index, :show, :create, :destroy]

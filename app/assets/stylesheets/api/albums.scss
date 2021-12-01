@@ -1,3 +1,42 @@
 // Place all the styles related to the api/albums controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.album-photos-container{
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album-photos {
+    // height: 200px;
+    // width: auto;
+    // padding-right: 2px;
+    flex-grow: 1;
+    margin: .2rem;
+    overflow: hidden;
+}
+
+.album-photos img {
+    display: block;
+    min-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition-duration: 300ms;
+}
+
+.album-header {
+    padding: 50px;
+    text-align: center;
+}
+
+.album-title {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+
+}
+
+.album-description {    
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+
+}
