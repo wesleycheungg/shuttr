@@ -10,9 +10,16 @@ require 'open-uri'
 User.destroy_all
 Photo.destroy_all
 
+
+
 # users
 user1 = User.create(username: "wcheung", email: "wcheung@gmail.com", full_name: "Wesley Cheung", password: "password")
 user2 = User.create(username: "demo", email: "demo@gmail.com", full_name: "Demo User", password: "password")
+
+# albums
+a1 = Album.create(title: "Japan", description: "I miss Japan...", user_id: user2.id)
+a2 = Album.create(title: "Mountains", description: "I love nature...", user_id: user1.id)
+a3 = Album.create(title: "Test", description: "This is a test album...", user_id: user2.id)
 
 # photos
 # Japan Album
@@ -65,7 +72,3 @@ p9.save
 
 
 
-# albums
-a1 = Album.create(title: "Japan", description: "I miss Japan...", user_id: user2.id)
-a2 = Album.create(title: "Mountains", description: "I love nature...", user_id: user1.id)
-a3 = Album.create(title: "Test", description: "This is a test album...", user_id: user2.id)
