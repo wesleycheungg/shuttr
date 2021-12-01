@@ -35,19 +35,6 @@ class PhotoCreate extends React.Component {
         this.props.createPhoto(formData).then( (res) => {
             this.props.history.push("/")
         });
-
-        // $.ajax({
-        //     url: '/api/photos',
-        //     method: 'POST',
-        //     data: formData,
-        //     contentType: false,
-        //     processData: false
-        // }).then(
-        //     (response) => this.props.history.push("/"),
-        //     (response) => {
-        //         console.log(response.responseJSON)
-        //     }
-        // );
     }
 
     render () {
