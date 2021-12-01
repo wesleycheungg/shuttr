@@ -18,8 +18,10 @@ export const fetchPhoto = (id) => (
 export const createPhoto = (photo) => (
     $.ajax({
         method: "POST",
-        url: `/api/photos/${photo.id}`,
-        data: {photo}
+        url: `/api/photos`,
+        data: photo,
+        processData: false,
+        contentType: false
     })
 )
 

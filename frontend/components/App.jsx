@@ -29,42 +29,8 @@ const App = () => (
 
 
 
-
-
-
     </div>
 );
 
 export default App;
 
-// export default class App extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             photos: []
-//         };
-//         this.fetchPhotos = this.fetchPhotos.bind(this);
-//     }
-
-//     fetchPhotos() {
-//         $.ajax({
-//             url: "/api/photos"
-//         }).then(photos => {
-//             // debugger
-//             this.setState({ photos });
-//         });
-//     }
-
-//     componentDidMount() {
-//         this.fetchPhotos();
-//     }
-
-//     render() {
-//         return (
-//             <div>
-//                 <Form fetchPhotos={this.fetchPhotos} />
-//                 <PhotoIndex photos={this.state.photos} />
-//             </div>
-//         );
-//     }
-// }
