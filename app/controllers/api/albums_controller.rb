@@ -12,12 +12,12 @@ class Api::AlbumsController < ApplicationController
     def create
         @album = Album.new(album_params)
         @album.user_id = current_user.id
-
-        photo_ids = params[:album][:photo_ids].split(',')
+        # debugger
+        # photo_ids = params[:album][:photo_ids].split(',')
         if @album.save
-            photo_ids.each do |photo_id|
-                @album.photo_albums.create(photo_id: photo_id.to_i)
-            end
+            # photo_ids.each do |photo_id|
+            #     @album.photo_albums.create(photo_id: photo_id.to_i)
+            # end
             render :show
             # render json: {message: "You did it"}
         else
@@ -38,9 +38,9 @@ class Api::AlbumsController < ApplicationController
     end
 
 
-    private
+    protected
 
     def album_params
-        params.require(:album).permit(:user_id, :title, :description)
+        params.require(:album).permit(:title, :description)
     end
 end

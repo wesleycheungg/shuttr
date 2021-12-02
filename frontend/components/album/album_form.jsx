@@ -5,18 +5,25 @@ class AlbumForm extends React.Component{
         super(props)
 
         this.photos = []
-        this.state = {
-            title: "",
-            description: "",
-            photos: []
-        }
 
+        this.state = this.props.album
+
+        // this.state = {
+        //     album: {
+        //         title: "",
+        //         description: "",
+        //     }
+            // photos: []
+        // }
+
+
+        this.handleSubmit = this.handleSubmit.bind(this)
         this.updateTitle = this.updateTitle.bind(this)
         this.updateDescription = this.updateDescription.bind(this)
     }
 
     componentDidMount() {
-        this.props.fetchAllPhotos();
+        // this.props.fetchAllPhotos();
     }
 
     updateTitle(e){
@@ -31,10 +38,15 @@ class AlbumForm extends React.Component{
         })
     }
 
+    update(field) {
+        return e => this.setState({ [field]: e.currentTarget.value });
+    }
+
     handleSubmit(e){
-        debugger
+        // debugger
+        console.log(this.state)
         e.preventDefault();
-        this.props.createAlbum(this.state.album)
+        this.props.createAlbum(this.state)
             .then( res => this.props.history.push(`/albums`))
     }
 
@@ -45,11 +57,13 @@ class AlbumForm extends React.Component{
                 <form className= "album-form" onSubmit={this.handleSubmit}>
                     <input
                         type="text"
-                        onChange={this.updateTitle}
+                        // onChange={this.updateTitle}
+                        onChange={this.update('title')}
                         placeholder="Title"
                     ></input>
                     <textarea
-                        onChange={this.updateDescription}
+                        // onChange={this.updateDescription}
+                        onChange={this.update('description')}
                         placeholder="Description"
                     ></textarea>
                     <div className="album-form-btns">

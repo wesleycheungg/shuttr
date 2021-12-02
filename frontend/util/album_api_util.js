@@ -30,7 +30,7 @@ export const createAlbum = (album) => (
     $.ajax({
         method: "POST",
         url: `/api/albums`,
-        data: album
+        data: {album}
     })
 )
 

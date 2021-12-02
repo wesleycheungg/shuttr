@@ -27,16 +27,24 @@
 }
 
 .album-header {
-    padding: 50px;
+    padding: 30px;
     text-align: center;
+    background-color: #1A2633;
+    margin-bottom: 5px;
 }
 
 .album-title {
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    font-size: 20px;
+    color: white;
 
 }
 
 .album-description {    
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    font-style: italic;
+    padding-top: 15px;
+    font-size: 15px;
+    color: white;
 
 }
