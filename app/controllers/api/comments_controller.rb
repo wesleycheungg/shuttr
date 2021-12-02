@@ -1,7 +1,7 @@
 class Api::CommentsController < ApplicationController
 
     def index
-        @comments = Comment.where(photo_id: params[:photo_id]).includes(:user)
+        @comments = Comment.where(photo_id: params[:photo_id])
         render :index
     end
 
@@ -16,6 +16,12 @@ class Api::CommentsController < ApplicationController
         end
     end
 
+    def destroy
+        # debugger
+        @comment= Comment.find_by(id: params[:id])
+        @comment.destroy
+        render :show
+    end
 
     private
 

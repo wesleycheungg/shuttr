@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { deleteComment, fetchPhotoComments } from '../../actions/comment_actions';
 import CommentShow from '../comments/comment_show'
+import { withRouter } from 'react-router-dom';
 
 const mSTP = (state, ownProps) => ({
     currentUserId: state.session.currentUserId,
@@ -13,4 +14,4 @@ const mDTP = (dispatch) => ({
     fetchPhotoComments: (photoId) => dispatch(fetchPhotoComments(photoId))
 })
 
-export default connect(mSTP, mDTP)(CommentShow)
+export default withRouter(connect(mSTP, mDTP)(CommentShow))

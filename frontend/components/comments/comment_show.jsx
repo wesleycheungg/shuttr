@@ -1,4 +1,6 @@
 import React from 'react';
+import CommentShowItem from './comment_show_item';
+import CommentFormContainer from './comment_form_container';
 
 class CommentShow extends React.Component {
     constructor(props){
@@ -11,13 +13,14 @@ class CommentShow extends React.Component {
     }
 
     render(){
-        let commentShowItems = this.props.comments.map((comment) => {
-            return <CommentShowItem key={comment.id} comment={comment} currentUser={this.props.currentUserId} deleteComment={this.props.deleteComment}/>
+        let CommentShowItems = this.props.comments.map((comment) => {
+            return <CommentShowItem key={comment.id} comment={comment} currentUserId={this.props.currentUserId} deleteComment={this.props.deleteComment}/>
         })
         return(
             <div>
                 <div>Comments </div>
-                {commentShowItems}
+                {CommentShowItems}
+                <CommentFormContainer />
             </div>
         )
     }
