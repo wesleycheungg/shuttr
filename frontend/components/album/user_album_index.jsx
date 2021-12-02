@@ -11,8 +11,8 @@ class UserAlbumIndex extends React.Component{
     componentDidMount() {
         this.props.fetchUserAlbums(this.props.userId)
         // this.props.fetchAlbumPhotos(this.props.userId, this.props.albumId)
-        // console.log(this.props.userId)
-        // console.log(this.props.albumId)
+        console.log(this.props.userId)
+        console.log(this.props.albumId)
         // this.props.fetchAlbums(this.props.userId)
         // console.log(this.props.userId)
     }
@@ -29,6 +29,10 @@ class UserAlbumIndex extends React.Component{
                 <div className="profile-nav-bar">
                     <Link className="profile-nav-bar-photostream" to="/">Photostream</Link>
                     <Link className="profile-nav-bar-albums" to={`/users/${this.props.userId}/albums`}>Albums</Link>
+                </div>
+
+                <div className="profile-nav-bar">
+                    <Link className="profile-nav-bar-new-albums-btn"to={`/albums/new`}>Create New Album</Link>
                 </div>
                 {/* {
                     albums.map(album => {

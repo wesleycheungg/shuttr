@@ -7,7 +7,7 @@ import UserAlbumIndex from './user_album_index';
 const mSTP = (state, ownProps) => ({
     userId: state.session.currentUserId,
     albums: Object.values(state.entities.albums),
-    // albumId: ownProps.match.params.id
+    albumId: ownProps.match.params.id,
     currentUser: state.entities.users[state.session.currentUserId],
     // albums: Object.keys(state.entities.albums).map(id => state.entities.albums[id]),
 })
