@@ -5,6 +5,11 @@ class CommentShow extends React.Component {
         super(props)
     }
 
+    componentDidMount(){
+        console.log(this.props.photoId)
+        this.props.fetchPhotoComments(this.props.photoId)
+    }
+
     render(){
         return(
             <div>

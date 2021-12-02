@@ -7,7 +7,7 @@ class PhotoShow extends React.Component{
     }
 
     componentDidMount() {
-        this.props.fetchPhoto(this.props.photoId)
+        // this.props.fetchPhoto(this.props.photoId)
     }
 
     render() {
@@ -17,9 +17,12 @@ class PhotoShow extends React.Component{
             return null;
         }
         return(
-            <div className="photo-show-container">
-                <img className="photo-show-img" src={photo.photoUrl} alt=""></img>
+            <div>
+                <div className="photo-show-container">
+                    <img className="photo-show-img" src={photo.photoUrl} alt=""></img>
+                </div>
                 <CommentShowContainer />
+
             </div>
         )
     }

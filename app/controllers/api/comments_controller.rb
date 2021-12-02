@@ -2,7 +2,7 @@ class Api::CommentsController < ApplicationController
 
     def index
         @comments = Comment.where(photo_id: params[:photo_id]).includes(:user)
-        # render :index
+        render :index
     end
 
     def create
@@ -13,6 +13,7 @@ class Api::CommentsController < ApplicationController
             render :show
         else
             render json: @comment.errors.full_messages, status: :unprocessable_entitiy
+        end
     end
 
 
