@@ -11,9 +11,13 @@ class CommentShow extends React.Component {
     }
 
     render(){
+        let commentShowItems = this.props.comments.map((comment) => {
+            return <CommentShowItem key={comment.id} comment={comment} currentUser={this.props.currentUserId} deleteComment={this.props.deleteComment}/>
+        })
         return(
             <div>
-                Commments comments comments
+                <div>Comments </div>
+                {commentShowItems}
             </div>
         )
     }
