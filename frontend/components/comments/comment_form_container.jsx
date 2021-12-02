@@ -4,7 +4,11 @@ import CommentForm from '../comments/comment_form';
 import { withRouter } from 'react-router-dom';
 
 const mSTP = (state, ownProps) => ({
-
+    photoId: ownProps.match.params.id,
+    currentUserId: state.session.currentUserId,
+    comments: {
+        body: ""
+    }
 })
 
 const mDTP = (dispatch) => ({
