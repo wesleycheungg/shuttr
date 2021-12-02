@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentShowContainer from '../comments/comment_show_container'
 
 class PhotoShow extends React.Component{
     constructor(props){
@@ -18,6 +19,7 @@ class PhotoShow extends React.Component{
         return(
             <div className="photo-show-container">
                 <img className="photo-show-img" src={photo.photoUrl} alt=""></img>
+                <CommentShowContainer />
             </div>
         )
     }
