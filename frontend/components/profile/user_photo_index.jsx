@@ -8,10 +8,12 @@ class UserPhotoIndex extends React.Component {
 
     componentDidMount(){
         console.log(this.props.userId)
+        console.log("this is componenet did mount")
         this.props.fetchUserPhotos(this.props.userId)
     }
 
     render() {
+        console.log("this is render")
         if (!this.props.userId){
             return null;
         }
