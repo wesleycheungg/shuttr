@@ -1,24 +1,5 @@
-# README
+[live link](https://shuttr-1.herokuapp.com/#/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Shuttr
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Shuttr is a full-stack web application that is a inspired by Flickr. Users can share and view photos. This application allows users to create albums, upload photos to those albums, make comments on photos, and explore other user's photos as well.

@@ -19,6 +19,7 @@ user2 = User.create(username: "demo", email: "demo@gmail.com", full_name: "Demo 
 # albums
 a1 = Album.create(title: "Japan", description: "I miss Japan...", user_id: user2.id)
 a2 = Album.create(title: "Mountains", description: "I love nature...", user_id: user1.id)
+a4 = Album.create(title: "GSW", description: "Why are the Warriors the best team in the NBA?", user_id: user2.id)
 a3 = Album.create(title: "Test", description: "This is a test album...", user_id: user2.id)
 
 # photos
@@ -70,5 +71,35 @@ photo9 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/shirne-2.jpg"
 p9.photo.attach(io: photo9, filename: "shirne-2.jpg")
 p9.save
 
+# Warriors Album
+p10 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "steph.jpg")
+photo10 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/steph.jpg")
+p10.photo.attach(io: photo10, filename: "steph.jpg")
+p10.save
+
+p11 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "big-4.jpg")
+photo11 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/big-4.jpg")
+p11.photo.attach(io: photo11, filename: "big-4.jpg")
+p11.save
+
+p12 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "klay.jpg")
+photo12 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/klay.jpg")
+p12.photo.attach(io: photo12, filename: "klay.jpg")
+p12.save
+
+p13 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "75.jpg")
+photo13 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/75.jpg")
+p13.photo.attach(io: photo13, filename: "75.jpg")
+p13.save
+
+p14 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "team.jpg")
+photo14 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/team.jpg")
+p14.photo.attach(io: photo14, filename: "team.jpg")
+p14.save
+
+#Comments
+c1 = Comment.create(body: "wow what an amazing photo!", user_id: user2.id, photo_id: p6.id)
+c2 = Comment.create(body: "sick!", user_id: user2.id, photo_id: p7.id)
+c3 = Comment.create(body: "WOW!", user_id: user2.id, photo_id: p8.id)
 
 
