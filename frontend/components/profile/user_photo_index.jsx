@@ -13,7 +13,7 @@ class UserPhotoIndex extends React.Component {
     }
 
     render() {
-        console.log("this is render")
+        let username = this.props.currentUser.username
         if (!this.props.userId){
             return null;
         }
@@ -28,11 +28,14 @@ class UserPhotoIndex extends React.Component {
             )
         })
 
-
         return (
             <div className="profile-container">
+                <div className="profile-header">
+                    {username}
+                </div>
+
                 <div className="profile-nav-bar">
-                    <Link className="profile-nav-bar-photostream" to={`/users/${this.props.userId}/photos}`}>Photostream</Link>
+                    <Link className="profile-nav-bar-photostream" to={`/users/${this.props.userId}/photos`}>Photostream</Link>
                     <Link className="profile-nav-bar-albums"to={`/users/${this.props.userId}/albums`}>Albums</Link>
                 </div>
 

@@ -5,7 +5,8 @@ import { fetchUserPhotos } from '../../actions/photos_actions'
 
 const mSTP = (state, ownProps) => ({
     userId: state.session.currentUserId,
-    photos: Object.values(state.entities.photos)
+    photos: Object.values(state.entities.photos),
+    currentUser: state.entities.users[state.session.currentUserId]
     
 })
 

@@ -2,6 +2,15 @@
     
 }
 
+.profile-header {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    padding: 30px;
+    background-color: #1A2633;
+    margin-bottom: 5px;
+    color: white;
+    padding-left: 200px;
+}
+
 .profile-nav-bar {
     display: flex;
     justify-content: center;
@@ -30,8 +39,21 @@
 }
 
 .profile-nav-bar-new-albums-btn {
-
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     text-decoration: none; 
     color: black;
+    margin-top: 20px;
+}
+
+.profile-album-header {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    text-decoration: none; 
+    color: black;
+}
+
+.profile-album-header-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+    padding-top: 20px;
 }
