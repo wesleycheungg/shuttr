@@ -21,19 +21,23 @@ class UserAlbumIndex extends React.Component{
         // const { albums } = this.props
         let a = this.props.albums.map( album => {
             return (
-                <UserAlbumIndexItem key={album.id} album={album}/>
+                <UserAlbumIndexItem className= "albums-list"key={album.id} album={album}/>
             )
         })
         return(
             <div className="albums-index-container">
                 <div className="profile-nav-bar">
-                    <Link className="profile-nav-bar-photostream" to="/">Photostream</Link>
+                    <Link className="profile-nav-bar-photostream" to={`/users/${this.props.userId}/photos`}>Photostream</Link>
                     <Link className="profile-nav-bar-albums" to={`/users/${this.props.userId}/albums`}>Albums</Link>
                 </div>
 
                 <div className="profile-nav-bar">
                     <Link className="profile-nav-bar-new-albums-btn"to={`/albums/new`}>Create New Album</Link>
                 </div>
+                
+                {a}
+
+
                 {/* {
                     albums.map(album => {
                         <Link to={`/albums/${album.id}`}>
@@ -41,9 +45,6 @@ class UserAlbumIndex extends React.Component{
                         </Link>
                     })
                 } */}
-                {a}
-                {/* <AlbumForm /> */}
-                {/* <Link to='/albums/new'>CREATE ALBUM</Link> */}
             </div>
         )
     }

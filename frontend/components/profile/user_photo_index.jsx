@@ -32,7 +32,7 @@ class UserPhotoIndex extends React.Component {
         return (
             <div className="profile-container">
                 <div className="profile-nav-bar">
-                    <Link className="profile-nav-bar-photostream"to="/">Photostream</Link>
+                    <Link className="profile-nav-bar-photostream" to={`/users/${this.props.userId}/photos}`}>Photostream</Link>
                     <Link className="profile-nav-bar-albums"to={`/users/${this.props.userId}/albums`}>Albums</Link>
                 </div>
 
