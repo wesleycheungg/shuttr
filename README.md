@@ -14,3 +14,6 @@ Shuttr is a full-stack web application that is a inspired by Flickr. Users can s
 * SCSS
 * Amazon's S3
 
+# Features
+
+### Photos
