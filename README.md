@@ -5,6 +5,7 @@
 Shuttr is a full-stack web application that is a inspired by Flickr. Users can share and view photos. This application allows users to create albums, upload photos to those albums, make comments on photos, and explore other user's photos as well.
 
 <img src="app/assets/images/user_auth.jpg">
+<img src="./src/img/wireframe.png">
 
 # Technologies Used
 * Ruby on Rails
@@ -16,6 +17,11 @@ Shuttr is a full-stack web application that is a inspired by Flickr. Users can s
 * Amazon's S3
 
 # Features
+
+## User Authentication
+Users will be able to create an account to use the features of the web application. If users already have an account they can log back in with their credentials. Error messages will produce if any of their input fields do not meet the requirements.
+
+(insert screen clipping of user auth)
 
 ## Photos
 
