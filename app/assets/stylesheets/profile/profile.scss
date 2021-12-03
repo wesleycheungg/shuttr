@@ -41,14 +41,28 @@
 .profile-nav-bar-new-albums-btn {
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     text-decoration: none; 
-    color: black;
+    color: white;
+    background-color: #5297D5;
     margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: 15px;
+    padding: 5px;
 }
+
+.profile-nav-bar-new-albums-btn:hover {
+    opacity: 80%;
+}
+
 
 .profile-album-header {
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     text-decoration: none; 
     color: black;
+    margin-bottom: 10px;
+    
 }
 
 .profile-album-header-container {

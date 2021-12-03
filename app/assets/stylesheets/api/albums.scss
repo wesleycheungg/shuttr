@@ -56,12 +56,16 @@
 
 .album-item-link {
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
-    text-decoration: none; 
+    text-decoration: none;  
     color: black;
-    background-color: lightgray;
-    padding-left: 200px;
-    padding-right: 200px;
+    background-color: whitesmoke;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-bottom: 10px;
+    width: 40%;
+    text-align: center;
+}
+
+.album-item-link:hover {
+    background-color: lightgray;
 }

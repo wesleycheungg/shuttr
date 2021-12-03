@@ -4,18 +4,7 @@ class AlbumForm extends React.Component{
     constructor(props){
         super(props)
 
-        this.photos = []
-
         this.state = this.props.album
-
-        // this.state = {
-        //     album: {
-        //         title: "",
-        //         description: "",
-        //     }
-            // photos: []
-        // }
-
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.updateTitle = this.updateTitle.bind(this)
@@ -53,23 +42,27 @@ class AlbumForm extends React.Component{
     render(){
         return(
             <div className="album-form-container">
-                <h2>Create new album</h2>
                 <form className= "album-form" onSubmit={this.handleSubmit}>
+                    <div className="album-form-header">Create New Album</div>
                     <input
+                        className="album-form-title"
                         type="text"
                         // onChange={this.updateTitle}
                         onChange={this.update('title')}
                         placeholder="Title"
                     ></input>
+                    <br></br>
                     <textarea
+                        className="album-form-description"
                         // onChange={this.updateDescription}
                         onChange={this.update('description')}
                         placeholder="Description"
                     ></textarea>
-                    <div className="album-form-btns">
+                    <div>
                         <input
+                            className= "album-form-btns"
                             type="submit"
-                            value="create album"
+                            value="Create Album!"
                         ></input>
                     </div>
 

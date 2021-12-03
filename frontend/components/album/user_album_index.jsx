@@ -37,7 +37,7 @@ class UserAlbumIndex extends React.Component{
 
                 <div className="profile-nav-bar">
                     {/* <Link className="profile-nav-bar-new-albums-btn"to={`/albums/new`}>Create New Album</Link> */}
-                    <Link className="profile-nav-bar-new-albums-btn" to={`/albums/new`}><button>Create New Album</button></Link>
+                    <Link to={`/albums/new`}><button className="profile-nav-bar-new-albums-btn">Create New Album</button></Link>
                 </div>
 
                 {/* {
