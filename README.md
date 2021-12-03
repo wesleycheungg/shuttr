@@ -5,8 +5,6 @@
 Shuttr is a full-stack web application that is a inspired by Flickr. Users can share and view photos. This application allows users to create albums, upload photos to those albums, make comments on photos, and explore other user's photos as well.
 
 <img src="app/assets/images/user_auth.jpg">
-(https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
 
 # Technologies Used
 * Ruby on Rails
@@ -22,27 +20,28 @@ Shuttr is a full-stack web application that is a inspired by Flickr. Users can s
 ## User Authentication
 Users will be able to create an account to use the features of the web application. If users already have an account they can log back in with their credentials. Error messages will produce if any of their input fields do not meet the requirements.
 
-(insert screen clipping of user auth)
-
 ## Photos
 
 ### Uploading Photos
 Users can add photos to their photostream or add photos to their album via the `Upload` button. Users can upload any number of photos they like to an album they created. Once an image is uploaded via the `Upload` button, they will be redirected the that photo's show page where just that photo is displayed.
 
-(insert clipping of Upload Form Page)
+### Uploading Photos to Album
+Users can add photos to albums using the `Upload` button as well. There is a drop down menu in which they can select albums they have already created and would like the photo they are currently uploading to be placed in there. Photos and Albums are connected with a join association between `albums` and `photos` in a `joins_table` called `album_photos`.
+
+<img src="app/assets/images/photo.gif">
 (insert code snippet for Upload Form)
 
 ### Viewing a Photo
-Albuma belong to a `user` and can hold many `photos`. Users will be able to view a gallery of photos via the `Explore Page`, `Photostream Page`, or `Album Page`. If a photo is clicked, they will be brought to that photo's show page where the photo is individually displayed and users can make comments.
+Albums belong to a `user` and can hold many `photos`. Users will be able to view a gallery of photos via the `Explore Page`, `Photostream Page`, or `Album Page`. If a photo is clicked, they will be brought to that photo's show page where the photo is individually displayed and users can make comments.
 
 (insert clipping of clicking through explore and profile > then clicking a photo to show Show Page)
 
 ## Albums
 
-### Adding Photos to Albums
-Users can add photos to albums using the `Upload` button as well. There is a drop down menu in which they can select albums they have already created and would like the photo they are currently uploading to be placed in there. Photos and Albums are connected with a join association between `albums` and `photos` in a `joins_table` called `album_photos`.
+### Creating an Albums
+Users can create and album by clicking the `Profile` button on the top right. Then click the `Albums` button on the profile nav bar which will take the user to a page with all the user's albums. Then click the `Create New Album` for the create new album form.
 
-(insert clipping of Upload Form Page)
+<img src="app/assets/images/album.gif">
 (insert code snippet for Upload Form where they select album)
 
 ## Comments
@@ -50,7 +49,7 @@ Users can add photos to albums using the `Upload` button as well. There is a dro
 ### Comments
 Comments belong to a `user` and a `photo`. Each photo will have a comments section below the image on it's Photo Show Page when the photo is clicked on. Comments can only be deleted by the `user` who created it. Other users will not be able to see the `delete icon` next to comments that are not thiers.
 
-(insert clipping of comment)
+<img src="app/assets/images/comment.gif">
 (insert code snippet for comment form)
 
 
