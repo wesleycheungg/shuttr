@@ -70,7 +70,7 @@ class PhotoCreate extends React.Component {
         return(
             <div className="upload-container-box">
                 <form className="upload-container" onSubmit={this.handleSubmit}>
-                    <div className="upload-form-header">Upload Photo</div>
+                    <div className="upload-form-header">Upload Photo!</div>
                     <input className="choose-photo-btn" type="file" onChange={this.handleFile} />
                     
                     {preview}

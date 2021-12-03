@@ -2,14 +2,73 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.comment {
+.comment-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 175px;
+    margin-right: auto;
+    width: 8em
+    // flex-wrap: wrap;
+}
 
+.comments-header {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    margin: 10px 0px 0px 0px;
+    text-align: left;
+    font-weight: bold;
 }
 
 .comment-username {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     padding-top: 5px;
+    font-size: 13px;
+    font-style: italic;
 }
 
 .comment-body {
-    padding: 5px;
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    display: inline-block;
+    padding-top: 3px;
+    font-size: 15px;
+    width: 450px;
 }  
+
+.comment-submit-btn {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    margin-bottom: 100px;
+
+}
+
+.comment-form-container {
+
+}
+
+.comment-show-container {
+    margin: 7px 0px 7px 0px;
+}
+
+.comment-form-body {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    width: 450px;
+    margin-top: 15px;
+}
+
+.comment-delete-icon {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    border: none;
+    background-color: white;
+    // display: flex;
+    // justify-content: flex-end;
+    // display: inline-block;
+    // float: right;
+}
+
+hr {
+    border-top: 1px solid black
+}
+
+.comment-body-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 460px;
+}

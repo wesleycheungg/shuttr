@@ -17,8 +17,8 @@ class CommentShow extends React.Component {
             return <CommentShowItem key={comment.id} comment={comment} currentUserId={this.props.currentUserId} deleteComment={this.props.deleteComment}/>
         })
         return(
-            <div>
-                <div>Comments </div>
+            <div className="comment-container">
+                <div className="comments-header">Comments</div>
                 {CommentShowItems}
                 <CommentFormContainer />
             </div>

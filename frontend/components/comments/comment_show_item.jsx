@@ -16,11 +16,13 @@ class CommentShowItem extends React.Component{
     render(){
         const {comment, currentUserId} = this.props
         return (
-            <div className="comment">
-                <div className="comment-username">user: {comment.username}</div>
-                <div className="comment-body">{comment.body}</div>
-                <p className="comment-timestamp">{comment.posted_time_ago}</p>
-                {currentUserId === comment.user_id && <button className="comment-delete-icon" onClick={this.onDelete}>x</button>}
+            <div className="comment-show-container">
+                <div className="comment-username">{comment.username}</div>
+                <div className="comment-body-container">
+                    <div className="comment-body">{comment.body} </div>
+                    {/* <p className="comment-timestamp">{comment.posted_time_ago}</p> */}
+                    {currentUserId === comment.user_id && <button className="comment-delete-icon" onClick={this.onDelete}>x</button>}
+                </div>
             </div>
         )
     }
