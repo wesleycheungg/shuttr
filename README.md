@@ -16,4 +16,7 @@ Shuttr is a full-stack web application that is a inspired by Flickr. Users can s
 
 # Features
 
-### Photos
+## Photos
+
+### Uploading Photos
+Users can add photos to their photostream or add photos to their album via the `Upload` button.
