@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 5px;
+    padding: 10px 5px 10px 5px;
     position:relative;
 }
 
@@ -65,7 +65,7 @@ nav {
     margin-right: 15px;
     background-color: whitesmoke;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
@@ -77,11 +77,11 @@ nav {
 
 .demoButton {
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
-    padding: 5px;
+    padding: 6px;
     margin-right: 10px;
     background-color: whitesmoke;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     font-size: 12px;
