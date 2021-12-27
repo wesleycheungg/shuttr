@@ -57,7 +57,7 @@ class SessionForm extends React.Component{
         const form = type === "Log In" ?
                 <form className="form-container-login" onSubmit={this.handleSubmit}>
                 <h1 className="form-container-header">
-                        Log In to Flickr
+                        Log in to Shuttr
                     </h1>
                     <br />
                     <div>
@@ -90,7 +90,7 @@ class SessionForm extends React.Component{
             :
             <form className="form-container-signup" onSubmit={this.handleSubmit}>
                 <h1 className="form-container-header">
-                    Sign up for Flickr
+                    Sign up for Shuttr
                 </h1>
                 <br />
                 <div>
