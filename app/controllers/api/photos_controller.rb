@@ -36,13 +36,12 @@ class Api::PhotosController < ApplicationController
 
     end
 
-    # def destroy
-    #     @photo = Photo.find(params[:id])
-    #     if @photo.user_id === current_user.id
-    #         @photo.destroy
-    #     end
-
-    # end
+    def destroy
+        @photo = Photo.find(params[:id])
+        if @photo.user_id === current_user.id
+            @photo.destroy
+        end
+    end
 
     def photo_params
         params.require(:photo).permit(:user_id, :album_id, :img_url, :photo)

@@ -1,5 +1,5 @@
 import React from "react";
-import { RECEIVE_ALL_PHOTOS, RECEIVE_PHOTO } from "../actions/photos_actions";
+import { RECEIVE_ALL_PHOTOS, RECEIVE_PHOTO, REMOVE_PHOTO } from "../actions/photos_actions";
 
 const photoReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
@@ -11,6 +11,9 @@ const photoReducer = (oldState = {}, action) => {
         case RECEIVE_PHOTO:
             nextState[action.photo.id] = action.photo;
             return nextState
+        case REMOVE_PHOTO:
+            delete nextState[action.photo.id];
+            return nextState;
         default:
             return oldState;
     }

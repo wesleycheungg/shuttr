@@ -18,8 +18,8 @@ const Greeting = ({ currentUser, logout, login }) => {
         <nav className="nav-bar-1">
             <Link className="logo" to="/">Shuttr</Link>
             <p className="greeting">Hi, {currentUser.full_name}</p>
-            {/* <Link className="upload" to="/new"><img className="upload-img" src="/Users/wes/Desktop/shuttr/app/assets/images/upload.jpg" alt=""></img></Link> */}
-            <Link className="upload" to="/new">Upload</Link>
+            <Link className="upload" to="/new"><img className="upload-img" src="/Users/wes/Desktop/shuttr/app/assets/images/upload-icon.png" alt=""></img></Link>
+            {/* <Link className="upload" to="/new">Upload</Link> */}
             <Link className="profile" to="/users/:id/photos">Profile</Link>
             <Link className="logout" onClick={handleSubmit} to="/">Log Out</Link>
         </nav>

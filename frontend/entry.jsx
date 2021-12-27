@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.signup = signup
     window.logout = logout
     window.fetchAllPhotos = fetchAllPhotos
+    
     // TESTING END
     
     
