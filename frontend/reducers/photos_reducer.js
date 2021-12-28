@@ -7,7 +7,8 @@ const photoReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_ALL_PHOTOS:
-            return action.photos;
+            nextState = action.photos
+            return nextState;
         case RECEIVE_PHOTO:
             nextState[action.photo.id] = action.photo;
             return nextState
