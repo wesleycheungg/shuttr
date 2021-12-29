@@ -20,7 +20,6 @@ const Greeting = ({ currentUser, logout, login }) => {
             <Link className="logo" to="/">Shuttr</Link>
             <p className="greeting">Hi, {currentUser.full_name}</p>
             <Link className="upload" to="/new"><img className="upload-img" src={upload_img} alt=""></img></Link>
-            {/* <Link className="upload" to="/new">Upload</Link> */}
             <Link className="profile" to="/users/:id/photos">Profile</Link>
             <Link className="logout" onClick={handleSubmit} to="/">Log Out</Link>
         </nav>
