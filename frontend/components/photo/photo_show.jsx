@@ -1,5 +1,6 @@
 import React from 'react';
-import CommentShowContainer from '../comments/comment_show_container'
+import CommentShowContainer from '../comments/comment_show_container';
+import { Link } from 'react-router-dom';
 
 class PhotoShow extends React.Component{
     constructor(props){
@@ -30,8 +31,9 @@ class PhotoShow extends React.Component{
         // console.log(photo.user_id);
         // console.log(user);
         return(
-            <div>
+            <div className="photo-show">
                 <div className="photo-show-container">
+                    <Link className="back-to-home-btn" to="/">Back to Photostream</Link>
                     <img className="photo-show-img" src={photo.photoUrl} alt=""></img>
                     <button className={(photo.user_id === user ? "delete-photo": "delete-photo-hidden")} onClick={this.onDelete}>Delete Photo</button>
                 </div>
