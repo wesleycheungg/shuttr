@@ -22,7 +22,7 @@
 .photo-items img {
     display: block;
     min-width: 100%;
-    height: 150px;
+    height: 200px;
     object-fit: cover;
     transition-duration: 300ms;
 }
@@ -134,7 +134,7 @@
 }
 
 .delete-photo{
-
+    margin-top: 25px;
 }
 
 .delete-photo-hidden{

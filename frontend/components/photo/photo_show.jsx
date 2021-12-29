@@ -14,7 +14,8 @@ class PhotoShow extends React.Component{
 
     onDelete() {
         const {deletePhoto, photo} = this.props
-        deletePhoto(photo.id).then(() => {
+        deletePhoto(photo.id)
+            .then(() => {
                 this.props.history.push(`/users/:id/photos`)
             })
     }
@@ -34,6 +35,7 @@ class PhotoShow extends React.Component{
                     <img className="photo-show-img" src={photo.photoUrl} alt=""></img>
                     <button className={(photo.user_id === user ? "delete-photo": "delete-photo-hidden")} onClick={this.onDelete}>Delete Photo</button>
                 </div>
+                <div>{user.full_name}</div>
                 <CommentShowContainer />
 
             </div>
