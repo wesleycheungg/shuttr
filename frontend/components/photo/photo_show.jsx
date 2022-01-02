@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentShowContainer from '../comments/comment_show_container';
 import { Link } from 'react-router-dom';
-// import back_arrow from '../../../app/assets/images/back-arrow.png';
+import back_arrow from 'assets/images/left-icon.png';
 
 class PhotoShow extends React.Component{
     constructor(props){
@@ -33,9 +33,11 @@ class PhotoShow extends React.Component{
         // console.log(user);
         return(
             <div className="photo-show">
-                {/* <img src={back_arrow}></img> */}
                 <div className="photo-show-container">
-                    <Link className="back-to-home-btn" to="/users/:id/photos">Back to Photostream</Link>
+                    <div>
+                        <img src={back_arrow}></img>
+                        <Link className="back-to-home-btn" to="/users/:id/photos">Back to Photostream</Link>
+                    </div>
                     <img className="photo-show-img" src={photo.photoUrl} alt=""></img>
                     <button className={(photo.user_id === user ? "delete-photo": "delete-photo-hidden")} onClick={this.onDelete}>Delete Photo</button>
                 </div>
