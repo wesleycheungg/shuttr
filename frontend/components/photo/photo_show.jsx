@@ -34,10 +34,7 @@ class PhotoShow extends React.Component{
         return(
             <div className="photo-show">
                 <div className="photo-show-container">
-                    <div>
-                        <img src={back_arrow}></img>
-                        <Link className="back-to-home-btn" to="/users/:id/photos">Back to Photostream</Link>
-                    </div>
+                    <Link className="back-to-home-btn" to="/users/:id/photos"><img className="back-arrow-icon" src={back_arrow}></img><div className="back-text">Back to Photostream</div></Link>
                     <img className="photo-show-img" src={photo.photoUrl} alt=""></img>
                     <button className={(photo.user_id === user ? "delete-photo": "delete-photo-hidden")} onClick={this.onDelete}>Delete Photo</button>
                 </div>
