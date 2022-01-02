@@ -26,8 +26,8 @@ class UserAlbumIndex extends React.Component{
                 </div>
 
                 <div className="profile-nav-bar">
-                    <Link className="profile-nav-bar-photostream" to={`/users/${this.props.userId}/photos`}>Photostream</Link>
-                    <Link className="profile-nav-bar-albums" to={`/users/${this.props.userId}/albums`}>Albums</Link>
+                    <Link className="album-nav-bar-photostream" to={`/users/${this.props.userId}/photos`}>Photostream</Link>
+                    <Link className="album-nav-bar-albums" to={`/users/${this.props.userId}/albums`}>Albums</Link>
                 </div>
 
                 <div className="profile-album-header-container">
