@@ -28,11 +28,6 @@
     border-bottom: 3px solid #3F8FD6;
 }
 
-.profile-nav-bar-photostream:hover {
-    border-bottom: 3px solid #3F8FD6;
-}
-
-
 .profile-nav-bar-albums {
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     display: block;
@@ -44,6 +39,7 @@
 }
 
 .profile-nav-bar-albums:hover {
+    transition: all 0.3s ease 0s;
     border-bottom: 3px solid #3F8FD6;
 }
 
@@ -58,6 +54,7 @@
 }
 
 .album-nav-bar-photostream:hover{
+    transition: all 0.3s ease 0s;
     border-bottom: 3px solid #3F8FD6;
 }
 
