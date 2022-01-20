@@ -7,9 +7,10 @@ class UserPhotoIndex extends React.Component {
     }
 
     componentDidMount(){
-        console.log(this.props.userId)
-        console.log("this is componenet did mount")
+        // console.log(this.props.userId)
+        // console.log("this is componenet did mount")
         this.props.fetchUserPhotos(this.props.userId)
+        console.log(this.props.photoLength)
     }
 
     render() {
@@ -18,7 +19,9 @@ class UserPhotoIndex extends React.Component {
             return null;
         }
 
-        let photos = this.props.photos.map( photo => {
+        let photos;
+
+        photos = this.props.photos.map( photo => {
             return(
                 <div key={photo.id} className="profile-photo-index-items">
                     <Link to={`/photos/${photo.id}`}>
@@ -27,6 +30,8 @@ class UserPhotoIndex extends React.Component {
                 </div>
             )
         })
+
+        console.log(photos)
 
         return (
             <div className="profile-container">
@@ -42,6 +47,8 @@ class UserPhotoIndex extends React.Component {
                 <div className="profile-photo-index">
                     {photos}
                 </div>
+
+                <div className={(photos.length < 1 ? "msg-unhidden" : "msg-hidden")}>You have no photos! Use the upload button on the Nav bar to upload photos!</div>
             </div>
         )
     }

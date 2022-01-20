@@ -100,26 +100,26 @@ class SessionForm extends React.Component{
                         <input
                             type="text"
                             className="session-form-fields"
+                            onChange={this.updateFullname}
+                            placeholder="Full Name"
+                        ></input>
+                        <input
+                            type="text"
+                            className="session-form-fields"
                             onChange={this.updateUsername}
                             placeholder="Username"
+                        ></input>
+                        <input
+                            type="text"
+                            className="session-form-fields"
+                            onChange={this.updateEmail}
+                            placeholder="Email address"
                         ></input>
                         <input
                             type="password"
                             className="session-form-fields"
                             onChange={this.updatePassword}
                             placeholder="Password"
-                        ></input>
-                        <input
-                            type="text"
-                            className="session-form-fields"
-                            onChange={this.updateEmail}
-                            placeholder="Email"
-                        ></input>
-                        <input
-                            type="text"
-                            className="session-form-fields"
-                            onChange={this.updateFullname}
-                            placeholder="Full Name"
                         ></input>
                 </div>
                 <br />
@@ -145,7 +145,7 @@ class SessionForm extends React.Component{
             <div className="session-container">
                 {loggedIn}
                 {form}
-                {console.log(type)}
+                {/* {console.log(type)} */}
             </div>
         )
     }

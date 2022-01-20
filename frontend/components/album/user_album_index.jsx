@@ -33,7 +33,10 @@ class UserAlbumIndex extends React.Component{
                 <div className="profile-album-header-container">
                     <div className="profile-album-header">Your Album List</div>
                 </div>
+
                 {a}
+
+                <div className={(a.length < 1 ? "msg-unhidden" : "msg-hidden")}>You have no albums. Click button below to create one!</div>
 
                 <div className="profile-nav-bar">
                     {/* <Link className="profile-nav-bar-new-albums-btn"to={`/albums/new`}>Create New Album</Link> */}
