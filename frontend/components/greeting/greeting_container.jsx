@@ -3,7 +3,8 @@ import { logout, login } from "../../actions/session_actions";
 import Greeting from "./greeting"
 
 const mSTP = (state) => ({
-    currentUser: state.entities.users[state.session.currentUserId]
+    currentUser: state.entities.users[state.session.currentUserId],
+    currentUserId: state.session.currentUserId
 })
 
 const mDTP = (dispatch) => ({

@@ -18,7 +18,7 @@ class PhotoShow extends React.Component{
         const {deletePhoto, photo} = this.props
         deletePhoto(photo.id)
             .then(() => {
-                this.props.history.push(`/users/:id/photos`)
+                this.props.history.push(`/users/${this.props.currentUser}/photos`)
             })
     }
 
@@ -34,7 +34,7 @@ class PhotoShow extends React.Component{
         return(
             <div className="photo-show">
                 <div className="photo-show-container">
-                    <Link className="back-to-home-btn" to="/users/:id/photos"><img className="back-arrow-icon" src={back_arrow}></img><div className="back-text">Back to Photostream</div></Link>
+                    <Link className="back-to-home-btn" to={`/users/${user}/photos`}><img className="back-arrow-icon" src={back_arrow}></img><div className="back-text">Back to Photostream</div></Link>
                     <img className="photo-show-img" src={photo.photoUrl} alt=""></img>
                     <button className={(photo.user_id === user ? "delete-photo": "delete-photo-hidden")} onClick={this.onDelete}>Delete Photo</button>
                 </div>
