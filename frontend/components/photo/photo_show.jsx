@@ -33,12 +33,25 @@ class PhotoShow extends React.Component{
         if (!photo) {
             return null;
         }
+
+        console.log(this.props.photoId)
+        console.log(this.props.photo)
+
+        let link;
+        let backText;
+        if(photo.user_id === user){
+            link = `/users/${user}/photos`
+            backText = `Back to Photostream`
+        } else {
+            link = `/`
+            backText = `Back to Explore`
+        }
         // console.log(photo.user_id);
         // console.log(user);
         return(
             <div className="photo-show">
                 <div className="photo-show-container">
-                    <Link className="back-to-home-btn" to={`/users/${user}/photos`}><img className="back-arrow-icon" src={back_arrow}></img><div className="back-text">Back to Photostream</div></Link>
+                    <Link className="back-to-home-btn" to={link}><img className="back-arrow-icon" src={back_arrow}></img><div className="back-text">{backText}</div></Link>
                     <img className="photo-show-img" src={photo.photoUrl} alt=""></img>
                     {/* <button className={(photo.user_id === user ? "delete-photo": "delete-photo-hidden")} onClick={this.onDelete}>Delete Photo</button> */}
                     <img className={(photo.user_id === user ? "delete-photo": "delete-photo-hidden")} src={trash} alt="trash" onClick={this.onDelete}></img>
