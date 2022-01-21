@@ -33,11 +33,13 @@ class CommentForm extends React.Component{
                     <textarea
                         className="comment-form-body"
                         onChange={this.updateBody}
-                        placeholder="Add your comment here"
+                        placeholder="Add a comment"
                         value={this.state.body}>
                     </textarea>
                     <br></br>
-                    <input className="comment-submit-btn" type="submit" value="Comment"></input>
+                    <div className="comment-submit-btn-container">
+                        <input className="comment-submit-btn" type="submit" value="Comment"></input>
+                    </div>
                 </form>
             </div>
         )
