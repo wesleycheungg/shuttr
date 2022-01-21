@@ -40,6 +40,7 @@ class Api::PhotosController < ApplicationController
         @photo = Photo.find(params[:id])
         if @photo.user_id === current_user.id
             @photo.destroy
+            render :show
         end
     end
 

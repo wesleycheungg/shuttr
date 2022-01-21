@@ -7,6 +7,8 @@ class Photo < ApplicationRecord
 
     has_many :comments
 
+    has_many :tags
+
     has_one_attached :photo
 
     def ensure_photo

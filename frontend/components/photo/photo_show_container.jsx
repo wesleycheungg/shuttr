@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { fetchPhoto, deletePhoto } from '../../actions/photos_actions';
 import PhotoShow from './photo_show'
 
+import { withRouter } from 'react-router-dom';
+
 const mSTP = (state, ownProps) => {
     return ({
         photo: state.entities.photos[ownProps.match.params.id],
@@ -17,4 +19,4 @@ const mDTP = (dispatch) => ({
     deletePhoto: (photoId) => dispatch(deletePhoto(photoId))
 })
 
-export default connect(mSTP, mDTP)(PhotoShow)
+export default withRouter(connect(mSTP, mDTP)(PhotoShow))

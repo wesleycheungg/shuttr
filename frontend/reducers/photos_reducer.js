@@ -13,7 +13,7 @@ const photoReducer = (oldState = {}, action) => {
             nextState[action.photo.id] = action.photo;
             return nextState
         case REMOVE_PHOTO:
-            delete nextState[action.photo.id];
+            delete nextState[action.photoId.id];
             return nextState;
         default:
             return oldState;

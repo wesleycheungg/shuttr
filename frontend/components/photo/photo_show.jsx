@@ -14,19 +14,20 @@ class PhotoShow extends React.Component{
         this.props.fetchPhoto(this.props.photoId)
     }
 
-    onDelete() {
-        const {deletePhoto, photo} = this.props
-        deletePhoto(photo.id)
-            .then(() => {
-                this.props.history.push(`/`)
-                // this.props.history.push(`/users/${this.props.currentUser}/photos`)
+    onDelete(e) {
+        e.preventDefault(); 
+        // const {deletePhoto, photo} = this.props
+        this.props.deletePhoto(this.props.photo.id)
+            .then(res => {
+                this.props.history.push(`/users/${this.props.currentUser}/photos`)
+
             })
     }
 
     render() {
         const photo = this.props.photo;
         const user = this.props.currentUser;
-        console.log(this.props.history)
+        // console.log(this.props.history)
         if (!photo) {
             return null;
         }
