@@ -30,17 +30,6 @@
     width: 50%;
 }
 
-.comment-body {
-    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
-    // display: inline-block;
-    padding-top: 3px;
-    font-size: 14px;
-    width: 100%;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    margin-right: 50px;
-}  
-
 .comment-submit-btn-container{
     display: flex;
     justify-content: end;
@@ -119,8 +108,24 @@ hr {
     border-top: 1px solid black
 }
 
-// .comment-body-container {
-//     display: flex;
-//     justify-content: flex-end;
-//     width: 100%;
-//  }
+.comment-body-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+ }
+
+ .comment-icons {
+     display: flex;
+     justify-content: end;
+ }
+
+ .comment-body {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    // display: inline-block;
+    padding-top: 3px;
+    font-size: 14px;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    margin-right: auto;
+}  

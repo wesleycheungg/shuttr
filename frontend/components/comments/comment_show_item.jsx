@@ -69,6 +69,9 @@ class CommentShowItem extends React.Component{
             <img className="comment-edit-icon" src={edit} alt="edit" onClick={this.toggleUpdateComment}>
             </img> : "";
 
+        const trashComment = currentUserId === comment.user_id ?
+            <img className="comment-delete-icon" src={trash} alt="trash" onClick={this.onDelete}>
+            </img> : "";
 
 
         return (
@@ -76,9 +79,13 @@ class CommentShowItem extends React.Component{
                 <div className="comment-username">{comment.username}</div>
                 <div className="comment-body-container">
                     {/* <div className="comment-body">{comment.body} </div> */}
-                    {updateCommentInput}
-                    {editComment}
-                    {currentUserId === comment.user_id && <img className="comment-delete-icon" src={trash} alt="trash" onClick={this.onDelete}></img>}
+                    <div className="comment-body">
+                        {updateCommentInput}
+                    </div>
+                    <div className="comment-icons">
+                        {editComment}
+                        {trashComment}
+                    </div>
                 </div>
             </div>
         )
