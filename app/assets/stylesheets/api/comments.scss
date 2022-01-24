@@ -100,18 +100,27 @@ textarea:invalid {
     cursor: pointer;
     width: 15px;
     height: 15px;
+    margin-left: 5px;
     // display: flex;
     // justify-content: flex-end;
     // display: inline-block;
     // float: right;
 }
 
+.comment-edit-icon {
+    border: none;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
 hr {
     border-top: 1px solid black
 }
 
-.comment-body-container {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
- }
+// .comment-body-container {
+//     display: flex;
+//     justify-content: flex-end;
+//     width: 100%;
+//  }

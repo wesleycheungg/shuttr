@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import trash from 'assets/images/trash.png';
+import edit from 'assets/images/edit.png';
 
 class CommentShowItem extends React.Component{
     constructor(props){
@@ -65,7 +66,8 @@ class CommentShowItem extends React.Component{
 
         //users can edit comments that they created
         const editComment = currentUserId === comment.user_id ? 
-            <button onClick={this.toggleUpdateComment}>Edit</button> : "";
+            <img className="comment-edit-icon" src={edit} alt="edit" onClick={this.toggleUpdateComment}>
+            </img> : "";
 
 
 
