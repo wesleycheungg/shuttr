@@ -21,7 +21,7 @@ export const createComment = (comment, photoId) => (
     })
 );
 
-export const updateComment = (comment) => (
+export const updateComment = (comment, id) => (
     $.ajax({
         method: "PATCH",
         url: `/api/comments/${comment.id}`,

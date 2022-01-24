@@ -6,7 +6,24 @@ class CommentShowItem extends React.Component{
     constructor(props){
         super(props)
 
-        this.onDelete = this.onDelete.bind(this)
+        this.state = {
+            body: this.props.comment.body,
+            updateComment: false
+        }
+        this.onDelete = this.onDelete.bind(this);
+        this.toggleUpdateComment = this.toggleUpdateComment.bind(this);
+        this.updateBody = this.updateBody.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+    toggleUpdateComment() {
+        this.setState({ updateComment: !this.state.updateComment })
+    }
+
+    updateBody(e){
+        this.setState({
+            body: e.target.value
+        })
     }
 
     onDelete() {
@@ -14,15 +31,51 @@ class CommentShowItem extends React.Component{
         deleteComment(comment.id)
     }
 
+    handleSubmit(e){
+        e.preventDefault();
+        const comment = {
+            body: this.state.body,
+            user_id: this.props.comment.user_id,
+            id: this.props.comment.id
+            // photo_id: this.props.comment.photo_id
+        }
+
+        this.props.updateComment(comment, this.props.comment.id);
+        this.toggleUpdateComment();
+    }
+
     render(){
+        console.log(this.state)
+        
         const {comment, currentUserId} = this.props
+
+        console.log(this.props.comment.id)
+
+
+
+        const updateCommentInput = this.state.updateComment ?
+            <form onSubmit={this.handleSubmit}>
+                <textarea
+                    className="comment-body"
+                    onChange={this.updateBody}
+                    placeholder={this.state.body}
+                    value={this.state.body}/>
+                <input className="comment-submit-btn" type="submit" value="Done"></input>
+            </form> : this.props.comment.body
+
+        //users can edit comments that they created
+        const editComment = currentUserId === comment.user_id ? 
+            <button onClick={this.toggleUpdateComment}>Edit</button> : "";
+
+
+
         return (
             <div className="comment-show-container">
                 <div className="comment-username">{comment.username}</div>
                 <div className="comment-body-container">
-                    <div className="comment-body">{comment.body} </div>
-                    {/* <p className="comment-timestamp">{comment.posted_time_ago}</p> */}
-                    {/* {currentUserId === comment.user_id && <button className="comment-delete-icon" onClick={this.onDelete}>x</button>} */}
+                    {/* <div className="comment-body">{comment.body} </div> */}
+                    {updateCommentInput}
+                    {editComment}
                     {currentUserId === comment.user_id && <img className="comment-delete-icon" src={trash} alt="trash" onClick={this.onDelete}></img>}
                 </div>
             </div>

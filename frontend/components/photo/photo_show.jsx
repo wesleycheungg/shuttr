@@ -13,17 +13,19 @@ class PhotoShow extends React.Component{
     }
 
     componentDidMount() {
-        this.props.fetchPhoto(this.props.photoId)
+        this.props.fetchPhoto(this.props.photoId);
+        // this.props.fetchAllUsers();
     }
 
     onDelete(e) {
         e.preventDefault(); 
         // const {deletePhoto, photo} = this.props
-        this.props.deletePhoto(this.props.photo.id)
-            .then(res => {
-                this.props.history.push(`/users/${this.props.currentUser}/photos`)
-
-            })
+        if(window.confirm("Are you sure you want to delete this photo?")){
+            this.props.deletePhoto(this.props.photo.id)
+                .then(res => {
+                    this.props.history.push(`/users/${this.props.currentUser}/photos`)
+                })
+        }
     }
 
     render() {
@@ -33,10 +35,6 @@ class PhotoShow extends React.Component{
         if (!photo) {
             return null;
         }
-
-        console.log(this.props.photoId)
-        console.log(this.props.photo)
-
         let link;
         let backText;
         if(photo.user_id === user){
@@ -46,13 +44,15 @@ class PhotoShow extends React.Component{
             link = `/`
             backText = `Back to Explore`
         }
-        // console.log(photo.user_id);
+        // console.log(user)
+        // console.log(photo.img_url);
         // console.log(user);
         return(
             <div className="photo-show">
                 <div className="photo-show-container">
                     <Link className="back-to-home-btn" to={link}><img className="back-arrow-icon" src={back_arrow}></img><div className="back-text">{backText}</div></Link>
                     <img className="photo-show-img" src={photo.photoUrl} alt=""></img>
+                    <div className="photo-show-title">{photo.img_url}</div>
                     {/* <button className={(photo.user_id === user ? "delete-photo": "delete-photo-hidden")} onClick={this.onDelete}>Delete Photo</button> */}
                     <img className={(photo.user_id === user ? "delete-photo": "delete-photo-hidden")} src={trash} alt="trash" onClick={this.onDelete}></img>
                 </div>

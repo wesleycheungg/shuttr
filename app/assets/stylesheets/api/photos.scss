@@ -51,6 +51,14 @@
     padding-top: 20px;
 }
 
+.photo-show-title {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    color: white;
+    font-style: italic;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
 .preview-img {
     display: block;
     max-height: 460px;
@@ -111,6 +119,12 @@
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
 }
 
+.title-field {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    margin-top: 10px;
+    width: 200px;
+}
+
 
 .profile-photo-index {
     max-width: 1024px;
@@ -134,11 +148,13 @@
 }
 
 .delete-photo{
+    // float: right;
     margin-top: 25px;
     cursor: pointer;
 }
 
 .delete-photo-hidden{
+    float: right;
     visibility: hidden;
 }
 

@@ -15,6 +15,7 @@ class PhotoCreate extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleFile = this.handleFile.bind(this)
         this.changeAlbum = this.changeAlbum.bind(this)
+        this.updateTitle = this.updateTitle.bind(this)
     }
 
     componentDidMount(){
@@ -24,6 +25,12 @@ class PhotoCreate extends React.Component {
     changeAlbum(e){
         this.setState({
             album_id: e.target.value
+        })
+    }
+
+    updateTitle(e){
+        this.setState({
+            img_url: e.target.value
         })
     }
 
@@ -72,6 +79,15 @@ class PhotoCreate extends React.Component {
                 <form className="upload-container" onSubmit={this.handleSubmit}>
                     <div className="upload-form-header">Upload Photo!</div>
                     <input className="choose-photo-btn" type="file" onChange={this.handleFile} />
+
+                    <div>
+                        <input
+                            type="text"
+                            className="title-field"
+                            onChange={this.updateTitle}
+                            placeholder="Title"
+                        ></input>
+                    </div>
                     
                     {preview}
                     

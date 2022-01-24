@@ -34,8 +34,8 @@ export const createComment = (comment, photoId) => (dispatch) => {
         .then((newComment) => dispatch(receiveComment(newComment)))
 }
 
-export const updateComment = (comment) => (dispatch) => {
-    return CommentAPIUtil.updateComment(comment)
+export const updateComment = (comment, id) => (dispatch) => {
+    return CommentAPIUtil.updateComment(comment, id)
         .then((updatedComment) => dispatch(receiveComment(updatedComment)))
 }
 

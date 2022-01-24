@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { fetchPhoto, deletePhoto } from '../../actions/photos_actions';
+import { fetchAllUsers } from '../../actions/user_actions';
 import PhotoShow from './photo_show'
 
 import { withRouter } from 'react-router-dom';
@@ -16,7 +17,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch) => ({
     fetchPhoto: (photoId) => dispatch(fetchPhoto(photoId)),
-    deletePhoto: (photoId) => dispatch(deletePhoto(photoId))
+    deletePhoto: (photoId) => dispatch(deletePhoto(photoId)),
+    fetchAllUsers: () => dispatch(fetchAllUsers())
 })
 
 export default withRouter(connect(mSTP, mDTP)(PhotoShow))

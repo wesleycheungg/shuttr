@@ -14,7 +14,7 @@ class CommentShow extends React.Component {
 
     render(){
         let CommentShowItems = this.props.comments.map((comment) => {
-            return <CommentShowItem key={comment.id} comment={comment} currentUserId={this.props.currentUserId} deleteComment={this.props.deleteComment}/>
+            return <CommentShowItem key={comment.id} comment={comment} currentUserId={this.props.currentUserId} updateComment={this.props.updateComment} deleteComment={this.props.deleteComment}/>
         })
         return(
             <div className="comment-container">

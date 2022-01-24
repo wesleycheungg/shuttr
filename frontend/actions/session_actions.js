@@ -7,6 +7,7 @@ export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS'
 export const REMOVE_SESSION_ERRORS = 'REMOVE_SESSION_ERRORS'
 
 
+
 //action creators returns actions
 const receiveCurrentUser = (user) => ({
     type: RECEIVE_CURRENT_USER,
@@ -25,7 +26,6 @@ const receiveSessionErrors = (errors) => ({
 export const removeSessionErrors = () => ({
     type: REMOVE_SESSION_ERRORS
 })
-
 
 //thunk action creators -> return functions
 export const login = (user) => dispatch => {
