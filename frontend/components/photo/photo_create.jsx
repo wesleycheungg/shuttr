@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class PhotoCreate extends React.Component {
     constructor(props){
@@ -63,7 +64,7 @@ class PhotoCreate extends React.Component {
     }
 
     render () {
-        // console.log(this.state);
+        console.log(this.state);
         let albumList;
         let albums = Object.values(this.props.albums)
         if(albums[0]) {
@@ -79,32 +80,36 @@ class PhotoCreate extends React.Component {
                 <form className="upload-container" onSubmit={this.handleSubmit}>
                     {/* <div className="upload-form-header">Upload Photo!</div> */}
 
-                    <label className="upload-form-header" for="file" onChange={this.handleFile}>Choose a file</label>
+                    <label className="upload-form-header" for="file" onChange={this.handleFile}>Click to select a file to upload.</label>
                     <input id="file" className="choose-photo-btn" type="file" onChange={this.handleFile} />
+
+                    {preview}
 
                     <div>
                         <input
                             type="text"
-                            className="title-field"
+                            className={(this.state.photoFile === null) ? "title-field-hidden" : "title-field"}
                             onChange={this.updateTitle}
                             placeholder="Title"
                         ></input>
                     </div>
                     
-                    {preview}
-                    
                     {/* <div className="choose-album-btn">Choose an Album to Upload to</div> */}
 
-                    <div className="select-boxes">
+                    <div className={(this.state.photoFile === null) ? "select-boxes-hidden" : "select-boxes"}>
                         <select onChange={this.changeAlbum} value={this.state.value}>
                             <option>Select a Album</option>
                             {albumList ? albumList : ""}
                         </select>
                     </div>
+                    
+                    <div className={(this.state.photoFile === null) ? "create-album-link-hidden" : "create-album-link"}>
+                        <div>Want to create new album?<Link className="album-link" to={`/albums/new`}>Click here.</Link></div>
+                    </div>
 
 
                     <div>
-                        <button className="upload-photo-btn">Upload Photo</button>
+                        <button className={(this.state.photoFile === null) ? "upload-photo-btn-hidden" : "upload-photo-btn"}>Upload Photo</button>
                         {/* <button className="upload-photo-btn">
                             Upload Photo
                         </button> */}

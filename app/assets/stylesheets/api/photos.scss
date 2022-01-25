@@ -79,9 +79,9 @@
 
 .preview-img {
     display: block;
-    max-height: 400px;
+    max-height: 300px;
     max-width: 60%;
-    padding-top: 30px;
+    // padding-top: 30px;
 }
 
 .upload-container {
@@ -89,18 +89,17 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
-
-.upload-container {
     // background-color: #fff1e6;
     // padding: 50px 30px 50px 30px;
-    padding: 75px;
-    margin-top: 50px;
+    // padding: 75px;
+    margin-top: 75px;
     // border-radius: 10px;
     border-style: dotted;
     border-width: 2px;
     border-color: black;
     margin-bottom: 50px;
+    width: 750px;
+    height: 550px;
 }
 
 .choose-photo-btn {
@@ -140,21 +139,34 @@
     opacity: 70%;
 }
 
+.upload-photo-btn-hidden {
+    display: none;
+}
+
 .upload-form-header {
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     cursor: pointer;
+    font-style: italic;
 }
 
 .title-field {
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
-    margin-top: 10px;
-    width: 200px;
+    margin-top: 15px;
+    width: 203px;
+}
+
+.title-field-hidden {
+    // visibility: hidden;
+    display: none;
 }
 
 .select-boxes {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
+.select-boxes-hidden {
+    display: none;
+}
 
 .profile-photo-index {
     max-width: 1024px;
@@ -230,3 +242,17 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+.create-album-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.create-album-link-hidden {
+    display: none;
+}
+
+.album-link {
+    margin-left: 3px;
+    text-decoration: none;
+    color: cadetblue;
+}
