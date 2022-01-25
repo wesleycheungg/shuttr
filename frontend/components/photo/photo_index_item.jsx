@@ -6,7 +6,7 @@ const PhotoIndexItem = (props) => {
     return (
         <div className="photo-items">
             <Link to={`/photos/${props.photo.id}`}>
-                <img src={photoUrl} alt=""></img>
+                <img className="photo-img" src={photoUrl} alt=""></img>
             </Link>
         </div>
     )

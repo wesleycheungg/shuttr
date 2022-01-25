@@ -19,6 +19,7 @@ class CommentShow extends React.Component {
         return(
             <div className="comment-container">
                 <div className="comments-header">Comments</div>
+                <div className="line"></div>
                 {CommentShowItems}
                 <CommentFormContainer />
             </div>

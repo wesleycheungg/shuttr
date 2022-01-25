@@ -27,6 +27,14 @@
     transition-duration: 300ms;
 }
 
+.photo-items a:hover img {
+    opacity: 0.5;
+}
+
+.photo-items img:hover {
+    // background-color: rgba(0, 0, 0, 0.2);
+}
+
 .photo-index-container {
     max-width: 1024px;
     margin: 0 auto;
@@ -162,7 +170,7 @@
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     color: white;
     background-color: #212123;
-    width: 100%;
+    // width: 100%;
     text-decoration: none;
     padding-left: 70px;
     padding-top: 20px;
@@ -189,3 +197,14 @@
 .back-text:hover{
     text-decoration: underline;
 }
+
+.photo-back-link-container{
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+}
+
+.photo-items:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+

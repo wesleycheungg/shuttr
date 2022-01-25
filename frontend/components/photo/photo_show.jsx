@@ -50,7 +50,9 @@ class PhotoShow extends React.Component{
         return(
             <div className="photo-show">
                 <div className="photo-show-container">
-                    <Link className="back-to-home-btn" to={link}><img className="back-arrow-icon" src={back_arrow}></img><div className="back-text">{backText}</div></Link>
+                    <div className="photo-back-link-container">
+                        <Link className="back-to-home-btn" to={link}><img className="back-arrow-icon" src={back_arrow}></img><div className="back-text">{backText}</div></Link>
+                    </div>
                     <img className="photo-show-img" src={photo.photoUrl} alt=""></img>
                     <div className="photo-show-title">{photo.img_url}</div>
                     {/* <button className={(photo.user_id === user ? "delete-photo": "delete-photo-hidden")} onClick={this.onDelete}>Delete Photo</button> */}
