@@ -100,12 +100,6 @@ class SessionForm extends React.Component{
                         <input
                             type="text"
                             className="session-form-fields"
-                            onChange={this.updateFullname}
-                            placeholder="Full Name"
-                        ></input>
-                        <input
-                            type="text"
-                            className="session-form-fields"
                             onChange={this.updateUsername}
                             placeholder="Username"
                         ></input>
@@ -114,6 +108,12 @@ class SessionForm extends React.Component{
                             className="session-form-fields"
                             onChange={this.updateEmail}
                             placeholder="Email address"
+                        ></input>
+                        <input
+                            type="text"
+                            className="session-form-fields"
+                            onChange={this.updateFullname}
+                            placeholder="Full Name"
                         ></input>
                         <input
                             type="password"

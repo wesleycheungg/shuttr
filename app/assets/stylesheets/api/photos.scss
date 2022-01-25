@@ -50,6 +50,7 @@
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 30px;
     // justify-content: center;
 }
 
@@ -92,11 +93,11 @@
     // background-color: #fff1e6;
     // padding: 50px 30px 50px 30px;
     // padding: 75px;
-    margin-top: 75px;
+    margin-top: 50px;
     // border-radius: 10px;
     border-style: dotted;
     border-width: 2px;
-    border-color: black;
+    border-color: #94958B;
     margin-bottom: 50px;
     width: 750px;
     height: 550px;
@@ -193,10 +194,10 @@
     // float: right;
     margin-top: 25px;
     cursor: pointer;
+    // float: right;
 }
 
 .delete-photo-hidden{
-    float: right;
     visibility: hidden;
 }
 

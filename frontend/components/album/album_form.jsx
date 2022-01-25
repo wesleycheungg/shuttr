@@ -33,7 +33,7 @@ class AlbumForm extends React.Component{
 
     handleSubmit(e){
         // debugger
-        console.log(this.state)
+        // console.log(this.state)
         e.preventDefault();
         this.props.createAlbum(this.state)
             .then( res => this.props.history.push(`/albums`))
