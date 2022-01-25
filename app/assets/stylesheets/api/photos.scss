@@ -17,6 +17,7 @@
     flex-grow: 1;
     margin: .2rem;
     overflow: hidden;
+    position: relative;
 }
 
 .photo-items img {
@@ -31,9 +32,18 @@
     opacity: 0.5;
 }
 
-.photo-items img:hover {
-    // background-color: rgba(0, 0, 0, 0.2);
+.photo-items:hover .photo-info {
+    opacity: 1;
 }
+
+.photo-info {
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    opacity: 0;
+}   
+
 
 .photo-index-container {
     max-width: 1024px;
