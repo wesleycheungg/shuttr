@@ -29,7 +29,7 @@
 }
 
 .photo-items a:hover img {
-    opacity: 0.5;
+    opacity: 0.75;
 }
 
 .photo-items:hover .photo-info {
@@ -79,7 +79,7 @@
 
 .preview-img {
     display: block;
-    max-height: 460px;
+    max-height: 400px;
     max-width: 60%;
     padding-top: 30px;
 }
@@ -91,10 +91,24 @@
     align-items: center;
 }
 
-.choose-photo-btn {
-    margin-top: 20px;
-    padding-left: 65px;
+.upload-container {
+    // background-color: #fff1e6;
+    // padding: 50px 30px 50px 30px;
+    padding: 75px;
+    margin-top: 50px;
+    // border-radius: 10px;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: black;
+    margin-bottom: 50px;
 }
+
+.choose-photo-btn {
+    // margin-top: 20px;
+    padding-left: 65px;
+    visibility: hidden;
+}
+
 
 .choose-album-btn {
     padding-top: 20px;
@@ -104,16 +118,9 @@
 .upload-container-box {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    overflow: hidden;
-}
-
-.upload-container {
-    background-color: #fff1e6;
-    padding: 50px 30px 50px 30px;
-    margin-top: 50px;
-    border-color: black;
-    border-radius: 10px;
+    align-items: center;
+    // flex-wrap: wrap;
+    // overflow: hidden;
 }
 
 .upload-photo-btn {
@@ -125,7 +132,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    font-size: 15px;
+    font-size: 13px;
     padding: 5px;
 }
 
@@ -135,12 +142,17 @@
 
 .upload-form-header {
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    cursor: pointer;
 }
 
 .title-field {
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     margin-top: 10px;
     width: 200px;
+}
+
+.select-boxes {
+    margin-top: 20px;
 }
 
 

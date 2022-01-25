@@ -63,7 +63,7 @@ class PhotoCreate extends React.Component {
     }
 
     render () {
-        console.log(this.state);
+        // console.log(this.state);
         let albumList;
         let albums = Object.values(this.props.albums)
         if(albums[0]) {
@@ -77,8 +77,10 @@ class PhotoCreate extends React.Component {
         return(
             <div className="upload-container-box">
                 <form className="upload-container" onSubmit={this.handleSubmit}>
-                    <div className="upload-form-header">Upload Photo!</div>
-                    <input className="choose-photo-btn" type="file" onChange={this.handleFile} />
+                    {/* <div className="upload-form-header">Upload Photo!</div> */}
+
+                    <label className="upload-form-header" for="file" onChange={this.handleFile}>Choose a file</label>
+                    <input id="file" className="choose-photo-btn" type="file" onChange={this.handleFile} />
 
                     <div>
                         <input
@@ -91,7 +93,7 @@ class PhotoCreate extends React.Component {
                     
                     {preview}
                     
-                    <div className="choose-album-btn">Choose an Album to Upload to</div>
+                    {/* <div className="choose-album-btn">Choose an Album to Upload to</div> */}
 
                     <div className="select-boxes">
                         <select onChange={this.changeAlbum} value={this.state.value}>
