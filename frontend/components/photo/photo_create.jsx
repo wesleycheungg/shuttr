@@ -64,7 +64,7 @@ class PhotoCreate extends React.Component {
     }
 
     render () {
-        console.log(this.state);
+        // console.log(this.state);
         let albumList;
         let albums = Object.values(this.props.albums)
         if(albums[0]) {
