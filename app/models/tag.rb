@@ -10,5 +10,4 @@ class Tag < ApplicationRecord
         through: :tagged_photos,
         source: :photo
 
-    
 end

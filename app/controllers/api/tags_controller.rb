@@ -1,11 +1,12 @@
 class Api::TagsController < ApplicationController
 
     def create 
-        @tag = Tag.find_by(name: params[:tag][:name])
+        @tag = Tag.find_by(name: params[:name])
+        debugger
         if @tag == nil
-            @tag = Tag.new(tag_params)
+            @tag = Tag.new(name: params[:name])
         end
-        
+
         if !@tag.save
             render json: ['Enter a new tag.'], status: 422
         else

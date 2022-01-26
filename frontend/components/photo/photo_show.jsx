@@ -1,6 +1,9 @@
 import React from 'react';
-import CommentShowContainer from '../comments/comment_show_container';
 import { Link } from 'react-router-dom';
+
+import CommentShowContainer from '../comments/comment_show_container';
+
+
 import back_arrow from 'assets/images/left-icon.png';
 import trash from 'assets/images/trash-w.png';
 
@@ -44,9 +47,7 @@ class PhotoShow extends React.Component{
             link = `/`
             backText = `Back to Explore`
         }
-        // console.log(user)
-        // console.log(photo.img_url);
-        // console.log(user);
+
         return(
             <div className="photo-show">
                 <div className="photo-show-container">
@@ -60,6 +61,7 @@ class PhotoShow extends React.Component{
                 </div>
                 <div>{user.full_name}</div>
                 <CommentShowContainer />
+
 
             </div>
         )
