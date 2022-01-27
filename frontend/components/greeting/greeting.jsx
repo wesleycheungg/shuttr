@@ -18,10 +18,10 @@ const Greeting = ({ currentUser, currentUserId, logout, login }) => {
 
     const loggedInView = () => (
         <nav className="nav-bar-1">
-            <img className="shuttr-logo" src={shutter} alt="shuttr-logo"></img>
+            <img className="shuttr-logo" src={window.logo} alt="shuttr-logo"></img>
             <Link className="logo" to="/">Shuttr</Link>
             <p className="greeting">Hi, {currentUser.full_name}</p>
-            <Link className="upload" to="/new"><img className="upload-img" src={upload_img} alt=""></img></Link>
+            <Link className="upload" to="/new"><img className="upload-img" src={window.upload} alt=""></img></Link>
             <Link className="profile" to={`/users/${currentUserId}/photos`}>Profile</Link>
             <Link className="logout" onClick={handleSubmit} to="/">Log Out</Link>
         </nav>
@@ -29,7 +29,7 @@ const Greeting = ({ currentUser, currentUserId, logout, login }) => {
     
     const loggedOutView = () => (
             <nav className="nav-bar-1">
-                <img className="shuttr-logo" src={shutter} alt="shuttr-logo"></img>
+                <img className="shuttr-logo" src={window.logo} alt="shuttr-logo"></img>
                 <Link className="logo" to="/">Shuttr</Link>
                 <Link className="login" to="/login">Log In</Link>
                 <button className="signupButton"><Link className="signup" to="/signup">Sign Up</Link></button>
