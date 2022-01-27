@@ -1,7 +1,7 @@
 import * as TagApiUtil from '../util/tag_api_util';
 
 export const RECEIVE_TAG = 'RECEIVE_TAG';
-export const RECEIVE_ALL_TAGS = 'RECEIVE_TAG'
+export const RECEIVE_ALL_TAGS = 'RECEIVE_ALL_TAGS'
 
 const receiveAllTags = (tags) => ({
     type: RECEIVE_ALL_TAGS,
@@ -10,7 +10,7 @@ const receiveAllTags = (tags) => ({
 
 const receiveTag = (tag) => ({
     type: RECEIVE_TAG,
-    tag
+    tag: tag
 })
 
 export const createTag = (tag) => (dispatch) => {

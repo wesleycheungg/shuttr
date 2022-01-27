@@ -27,17 +27,16 @@ class TagForm extends React.Component{
     }
 
     render(){
-        console.log(this.state)
         return(
             <>
                 <form className="tag-form-container" onSubmit={this.handleSubmit}>
-                    <textarea
+                    <input
                         className="tag-form-body"
                         onChange={this.updateName}
                         placeholder="Add a tag"
                         value={this.state.name}
                     >
-                    </textarea>
+                    </input>
                     <div className="tag-submit-btn-container">
                         <input className="tag-submit-btn" type="submit" value="Add"></input>
                     </div>

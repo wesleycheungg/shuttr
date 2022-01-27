@@ -62,7 +62,7 @@ class PhotoShow extends React.Component{
                 </div>
                 <div>{user.full_name}</div>
                 
-                <div>
+                <div className="photo-show-container-2">
                     <CommentShowContainer />
                     <TagShowContainer />
                 </div>

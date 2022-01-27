@@ -20,15 +20,16 @@ class TagShow extends React.Component {
                 tag={tag}
                 currentUserId={this.props.currentUserId}
                 photo={this.props.photo}
-
             />
         })
         return(
             <>
                 <div className="tag-container">
                     <div className="tag-header">Tags</div>
-                    {/* <div className="line"></div> */}
-                    {TagShowItems}
+                    <div className="line"></div>
+                    <ul className="tags-items-list">
+                        {TagShowItems}
+                    </ul>
                     <TagFormContainer />
 
                 </div>

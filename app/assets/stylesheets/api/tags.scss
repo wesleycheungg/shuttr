@@ -2,3 +2,59 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//tag show
+.tag-container {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    width: 20%;
+    margin-left: -100px;
+}
+
+.tag-header {
+    font-weight: 600;
+    margin: 10px 0px 0px 0px;
+    text-align: left;
+}
+
+.tag-items {
+    margin-right: 4px;
+    margin-top: 4px;
+    background-color: #CFD6D9;
+    padding: 4px 10px 4px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.tags-items-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+//tag form
+.tag-form-container {
+    margin-top: 10px;
+}
+
+.tag-submit-btn {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    background-color: #428DD6;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+    margin-left: 0px;
+    margin-top: 5px;
+    transition: all 0.3s ease 0s;
+}
+
+.tag-submit-btn:hover {
+    background-color: #2c9ed3;
+}
+
+.tag-form-body {
+    padding: 6px 10px;
+}
