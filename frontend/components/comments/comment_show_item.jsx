@@ -46,11 +46,11 @@ class CommentShowItem extends React.Component{
     }
 
     render(){
-        console.log(this.state)
+        // console.log(this.state)
         
         const {comment, currentUserId} = this.props
 
-        console.log(this.props.comment.id)
+        // console.log(this.props.comment.id)
 
 
 

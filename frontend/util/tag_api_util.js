@@ -5,3 +5,10 @@ export const createTag = (tag) => (
         data: {tag}
     })
 )
+
+export const fetchTags = (photoId) => (
+    $.ajax({
+        method: "GET",
+        url: `/api/photos/${photoId}/tags`
+    })
+)

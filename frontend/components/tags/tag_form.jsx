@@ -4,13 +4,15 @@ class TagForm extends React.Component{
     constructor(props){
         super(props)
         this.state = {
+            photo_id: this.props.photoId,
             name: ""
         }
 
-
+        this.updateName = this.updateName.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    updateTag(e){
+    updateName(e){
         this.setState({
             name: e.target.value
         })
@@ -18,18 +20,20 @@ class TagForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.createTag(thats.state).then(
+        // this.props.createTag(this.state)
+        this.props.createTag(this.state).then(
             this.setState({name: ""})
         )
     }
 
     render(){
+        console.log(this.state)
         return(
             <>
                 <form className="tag-form-container" onSubmit={this.handleSubmit}>
                     <textarea
                         className="tag-form-body"
-                        onChange={this.updateTag}
+                        onChange={this.updateName}
                         placeholder="Add a tag"
                         value={this.state.name}
                     >

@@ -8,7 +8,7 @@ class CommentShow extends React.Component {
     }
 
     componentDidMount(){
-        console.log(this.props.photoId)
+        // console.log(this.props.photoId)
         this.props.fetchPhotoComments(this.props.photoId)
     }
 

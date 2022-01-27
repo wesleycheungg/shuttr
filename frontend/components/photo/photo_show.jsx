@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import CommentShowContainer from '../comments/comment_show_container';
+import TagShowContainer from '../tags/tag_show_container';
 
 
 import back_arrow from 'assets/images/left-icon.png';
@@ -60,8 +61,11 @@ class PhotoShow extends React.Component{
                     <img className={(photo.user_id === user ? "delete-photo": "delete-photo-hidden")} src={trash} alt="trash" onClick={this.onDelete}></img>
                 </div>
                 <div>{user.full_name}</div>
-                <CommentShowContainer />
-
+                
+                <div>
+                    <CommentShowContainer />
+                    <TagShowContainer />
+                </div>
 
             </div>
         )
