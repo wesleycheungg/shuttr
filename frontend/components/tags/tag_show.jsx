@@ -20,6 +20,7 @@ class TagShow extends React.Component {
                 tag={tag}
                 currentUserId={this.props.currentUserId}
                 photo={this.props.photo}
+                deleteTag={this.props.deleteTag}
             />
         })
         return(

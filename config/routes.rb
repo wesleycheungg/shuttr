@@ -20,5 +20,7 @@ Rails.application.routes.draw do
 
     resources :albums, only: [:index, :create, :show, :destroy, :update]
     resources :comments, only: [:show, :update, :destroy]
+    resources :tags, only: [:destroy]
   end
+  delete 'api/tags/:id/photo/:photoId', :to => 'api/tags#destroy'
 end

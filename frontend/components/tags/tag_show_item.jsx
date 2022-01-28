@@ -1,19 +1,38 @@
 import React from 'react';
 
-const TagShowItem = (props) => {
-    if(props.currentUserId === props.photo.user_id){
+class TagShowItem extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.onDelete = this.onDelete.bind(this)
+    }
+
+    onDelete() {
+        const {tag, photo, deleteTag} = this.props;
+        deleteTag(tag.id, photo.id)
+    }
+
+    render(){
+        const {tag, currentUserId, photo} = this.props;
+        console.log(currentUserId)
+        console.log(photo.user_id)
+
+        const tagIndex = currentUserId === photo.user_id ?
+            <div>
+                <div className="tag-items">
+                    {tag.name}
+                </div> 
+                <button className="tag-items-delete-btn" onClick={this.onDelete}>x</button>
+            </div> :
+            <div className="tag-items">
+                {tag.name}
+            </div>
+
         return(
-            <div className="tag-items">
-                {props.tag.name}
-            </div>
-        )
-    } else {
-        return (
-            <div className="tag-items">
-                {props.tag.name}
-            </div>
+            <>
+                {tagIndex}
+            </>
         )
     }
 }
-
 export default TagShowItem;

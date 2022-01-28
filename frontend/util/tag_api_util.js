@@ -12,3 +12,10 @@ export const fetchTags = (photoId) => (
         url: `/api/photos/${photoId}/tags`
     })
 )
+
+export const deleteTag = (tagId, photoId) => (
+    $.ajax({
+        method: "DELETE",
+        url: `/api/tags/${tagId}/photo/${photoId}`
+    })
+)
