@@ -25,8 +25,8 @@ class TagShow extends React.Component {
         return(
             <>
                 <div className="tag-container">
-                    <div className="tag-header">Tags</div>
                     <div className="line"></div>
+                    <div className="tag-header">Tags</div>
                     <ul className="tags-items-list">
                         {TagShowItems}
                     </ul>
