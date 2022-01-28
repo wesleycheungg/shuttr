@@ -27,20 +27,22 @@ class TagForm extends React.Component{
     }
 
     render(){
+        const tagForm = this.props.currentUserId === this.props.photo[0].user_id ? 
+            <form className="tag-form-container" onSubmit={this.handleSubmit}>
+                <input
+                    className="tag-form-body"
+                    onChange={this.updateName}
+                    placeholder="Add a tag"
+                    value={this.state.name}
+                >
+                </input>
+                <div className="tag-submit-btn-container">
+                    <input className="tag-submit-btn" type="submit" value="Add"></input>
+                </div>
+            </form> : ""
         return(
             <>
-                <form className="tag-form-container" onSubmit={this.handleSubmit}>
-                    <input
-                        className="tag-form-body"
-                        onChange={this.updateName}
-                        placeholder="Add a tag"
-                        value={this.state.name}
-                    >
-                    </input>
-                    <div className="tag-submit-btn-container">
-                        <input className="tag-submit-btn" type="submit" value="Add"></input>
-                    </div>
-                </form>
+                {tagForm}
             </>
         )
     }

@@ -7,9 +7,11 @@ import TagForm from './tag_form';
 const mSTP = (state, ownProps) => ({
     photoId: ownProps.match.params.id,
     currentUserId: state.session.currentUserId,
+    photo: Object.values(state.entities.photos),
     tags: {
         name: ""
     }
+    
 })
 
 const mDTP = (dispatch) => ({
