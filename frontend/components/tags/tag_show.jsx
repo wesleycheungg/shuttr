@@ -13,7 +13,6 @@ class TagShow extends React.Component {
     }
 
     render(){
-        console.log(this.props.tags)
         let TagShowItems = this.props.tags.map((tag) => {
             return <TagShowItem 
                 key={tag.id}

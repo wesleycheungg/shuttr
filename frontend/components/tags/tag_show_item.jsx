@@ -14,13 +14,12 @@ class TagShowItem extends React.Component {
 
     render(){
         const {tag, currentUserId, photo, photoId} = this.props;
-        console.log(photo[0].id)
 
         const tagIndex = currentUserId === photo[0].user_id ?
             <div className="tag-item-container">
                 <div className="tag-items">
                     {tag.name}
-                    <button className="tag-items-delete-btn" onClick={this.onDelete}>x</button>
+                    <p className="tag-items-delete-btn" onClick={this.onDelete}>x</p>
                 </div> 
             </div> :
             <div className="tag-items">
