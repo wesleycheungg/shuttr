@@ -18,8 +18,8 @@ class CommentShow extends React.Component {
         })
         return(
             <div className="comment-container">
-                <div className="comments-header">Comments</div>
                 <div className="line"></div>
+                <div className="comments-header">Comments</div>
                 {CommentShowItems}
                 <CommentFormContainer />
             </div>

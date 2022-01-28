@@ -35,6 +35,7 @@ class PhotoShow extends React.Component{
     render() {
         const photo = this.props.photo;
         const user = this.props.currentUser;
+        
         // console.log(this.props.history)
         if (!photo) {
             return null;
@@ -49,6 +50,8 @@ class PhotoShow extends React.Component{
             backText = `Back to Explore`
         }
 
+        let photoUserId = photo.user_id;
+        let fullName = this.props.users[photoUserId].full_name;
         return(
             <div className="photo-show">
                 <div className="photo-show-container">
@@ -56,14 +59,16 @@ class PhotoShow extends React.Component{
                         <Link className="back-to-home-btn" to={link}><img className="back-arrow-icon" src={back_arrow}></img><div className="back-text">{backText}</div></Link>
                     </div>
                     <img className="photo-show-img" src={photo.photoUrl} alt=""></img>
-                    <div className="photo-show-title">{photo.img_url}</div>
                     {/* <button className={(photo.user_id === user ? "delete-photo": "delete-photo-hidden")} onClick={this.onDelete}>Delete Photo</button> */}
                     <img className={(photo.user_id === user ? "delete-photo": "delete-photo-hidden")} src={trash} alt="trash" onClick={this.onDelete}></img>
                 </div>
-                <div>{user.full_name}</div>
                 
                 <div className="photo-show-container-2">
-                    <CommentShowContainer />
+                    <div className="photo-show-container-2-col-1">
+                        <div className="photo-show-username">{fullName}</div>
+                        <div className="photo-show-title">{photo.img_url}</div>
+                        <CommentShowContainer />
+                    </div>
                     <TagShowContainer />
                 </div>
 

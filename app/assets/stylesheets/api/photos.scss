@@ -72,10 +72,10 @@
 
 .photo-show-title {
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
-    color: white;
+    // color: white;
     font-style: italic;
-    margin-top: 15px;
-    font-size: 18px;
+    margin-top: 20px;
+    font-size: 15px;
 }
 
 .preview-img {
@@ -191,6 +191,8 @@
     // float: right;
     margin-top: 25px;
     cursor: pointer;
+    align-self: flex-end;
+    margin-right: 25px;
     // float: right;
 }
 
@@ -258,4 +260,15 @@
 .photo-show-container-2 {
     display: flex;
     justify-content: space-around;
+}
+
+.photo-show-container-2-col-1 {
+    width: 40%
+}
+
+.photo-show-username {
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 10px;
 }

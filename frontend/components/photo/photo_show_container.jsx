@@ -10,7 +10,10 @@ const mSTP = (state, ownProps) => {
     return ({
         photo: state.entities.photos[ownProps.match.params.id],
         photoId: ownProps.match.params.id,
-        currentUser: state.session.currentUserId
+        currentUser: state.session.currentUserId,
+        // fullName: state.entities.users[state.entities.photos[ownProps.match.params.id].user_id].full_name
+        // fullName: state.entities.users[ownProps.match.params.user_id]
+        users: state.entities.users
     })
 
 }
