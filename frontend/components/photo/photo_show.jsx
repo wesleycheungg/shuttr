@@ -52,7 +52,8 @@ class PhotoShow extends React.Component{
 
         let photoUserId = photo.user_id;
         let fullName = this.props.users[photoUserId].full_name;
-        return(
+        if(this.props.users !== undefined){
+            return(
             <div className="photo-show">
                 <div className="photo-show-container">
                     <div className="photo-back-link-container">
@@ -65,6 +66,7 @@ class PhotoShow extends React.Component{
                 
                 <div className="photo-show-container-2">
                     <div className="photo-show-container-2-col-1">
+                        {/* <Link className="photo-show-username" to={`/users/${photoUserId}/photos`}>{fullName}</Link> */}
                         <div className="photo-show-username">{fullName}</div>
                         <div className="photo-show-title">{photo.img_url}</div>
                         <CommentShowContainer />
@@ -74,6 +76,10 @@ class PhotoShow extends React.Component{
 
             </div>
         )
+        } else {
+            return null;
+        }
+        
     }
 }
 
