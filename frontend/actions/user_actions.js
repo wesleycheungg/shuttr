@@ -7,7 +7,7 @@ const receiveAllUsers = (users) => ({
     users
 })
 
-export const fetchAllUsers = () => dispatch (
+export const fetchAllUsers = () => (dispatch) => (
     UserApiUtil.fetchAllUsers()
         .then(users => dispatch(receiveAllUsers(users)))
 )
