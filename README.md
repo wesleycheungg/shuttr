@@ -25,7 +25,7 @@ Users can create an account that will allow them to use different features of th
 ## Photos
 
 ### Uploading Photos
-Users can add photos to their photostream or add photos to their album via the `Upload` button. Users can upload any number of photos they like to an album they created. Once an image is uploaded via the `Upload` button, they will be redirected the that photo's show page where just that photo is displayed.
+Users can click and add photos along with a photo totle to any album they already have created via the `Upload` button on the Navigation Bar. Once an image is uploaded via the `Upload` button, they will be redirected the that photo's show page where just that photo is displayed.
 
 ### Uploading Photos to Album
 Users can add photos to albums using the `Upload` button as well. There is a drop down menu in which they can select albums they have already created and would like the photo they are currently uploading to be placed in there. Photos and Albums are connected with a join association between `albums` and `photos` in a `joins_table` called `album_photos`.
@@ -35,12 +35,10 @@ Users can add photos to albums using the `Upload` button as well. There is a dro
 ### Viewing a Photo
 Albums belong to a `user` and can hold many `photos`. Users will be able to view a gallery of photos via the `Explore Page`, `Photostream Page`, or `Album Page`. If a photo is clicked, they will be brought to that photo's show page where the photo is individually displayed and users can make comments.
 
-(insert clipping of clicking through explore and profile > then clicking a photo to show Show Page)
-
 ## Albums
 
 ### Creating an Albums
-Users can create and album by clicking the `Profile` button on the top right. Then click the `Albums` button on the profile nav bar which will take the user to a page with all the user's albums. Then click the `Create New Album` for the create new album form.
+Users can create an album by clicking the `Profile` button on the top right. Then click the `Albums` button on the profile nav bar which will take the user to a page with all the user's albums. Then click the `Create New Album` for the create new album form.
 
 <img src="app/assets/images/album.gif">
 
