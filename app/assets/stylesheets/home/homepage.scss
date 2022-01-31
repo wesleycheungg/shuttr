@@ -53,3 +53,19 @@
     text-decoration: none; 
     color: black;
 }
+
+.footer-container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+.footer-logos {
+    
+}

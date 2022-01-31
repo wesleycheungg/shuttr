@@ -23,9 +23,12 @@ class Home extends React.Component{
                     <h1>Find your inspiration.</h1>
                     <p>Join the Shuttr community, home to ten of billions of photos and 2 million groups.</p>
                     <button className="start-for-free-btn"><Link className="free-btn" to="/signup">Start for Free</Link></button>
-
                 </div>
-
+                <div className="footer-container">
+                    <img className="footer-logos" src={window.github}></img>
+                    <img className="footer-logos" src={window.linkedin}></img>
+                    <img className="footer-logos" src={window.angellist}></img>
+                </div>
             </div>
         )
     }
