@@ -18,7 +18,9 @@ Shuttr is a full-stack web application that is a inspired by Flickr. Users can s
 # Features
 
 ## User Authentication
-Users will be able to create an account to use the features of the web application. If users already have an account they can log back in with their credentials. Error messages will produce if any of their input fields do not meet the requirements.
+Users can create an account that will allow them to use different features of the Shuttr web application. If users already have an account they can log back in with their credentials. Error messages will populate on the screen if any of their input fields do not meet the requirements.
+
+<img src="app/assets/images/github/auth.gif">
 
 ## Photos
 
