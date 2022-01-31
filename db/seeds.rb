@@ -24,75 +24,75 @@ a3 = Album.create(title: "Test", description: "This is a test album...", user_id
 
 # photos
 # Japan Album
-p1 = Photo.new(user_id: user2.id, album_id: a1.id, img_url: "alley.jpg")
+p1 = Photo.new(user_id: user2.id, album_id: a1.id, img_url: "Alley in Kyoto")
 photo1 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/alley.jpg")
 p1.photo.attach(io: photo1, filename: "alley.jpg")
 p1.save
 
-p2 = Photo.new(user_id: user2.id, album_id: a1.id, img_url: "bamboo.jpg")
+p2 = Photo.new(user_id: user2.id, album_id: a1.id, img_url: "Bamboo Forest")
 photo2 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/bamboo.jpg")
 p2.photo.attach(io: photo2, filename: "bamboo.jpg")
 p2.save
 
-p3 = Photo.new(user_id: user2.id, album_id: a1.id, img_url: "castle.jpg")
+p3 = Photo.new(user_id: user2.id, album_id: a1.id, img_url: "Kyoto Castle")
 photo3 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/castle.jpg")
 p3.photo.attach(io: photo3, filename: "castle.jpg")
 p3.save
 
-p4 = Photo.new(user_id: user2.id, album_id: a1.id, img_url: "shrine.jpg")
+p4 = Photo.new(user_id: user2.id, album_id: a1.id, img_url: "Shrine 1")
 photo4 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/shrine.jpg")
 p4.photo.attach(io: photo4, filename: "shrine.jpg")
 p4.save
 
-p5 = Photo.new(user_id: user2.id, album_id: a1.id, img_url: "kyoto.jpg")
+p5 = Photo.new(user_id: user2.id, album_id: a1.id, img_url: "View of Kyoto")
 photo5 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/kyoto.jpg")
 p5.photo.attach(io: photo5, filename: "kyoto.jpg")
 p5.save
 
 # Mountain Album
-p6 = Photo.new(user_id: user1.id, album_id: a2.id, img_url: "m6.jpg")
+p6 = Photo.new(user_id: user1.id, album_id: a2.id, img_url: "Lake in the Mountains")
 photo6 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/m6.jpg")
 p6.photo.attach(io: photo6, filename: "m6.jpg")
 p6.save
 
-p7 = Photo.new(user_id: user1.id, album_id: a2.id, img_url: "m7.jpg")
+p7 = Photo.new(user_id: user1.id, album_id: a2.id, img_url: "River")
 photo7 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/m7.jpg")
 p7.photo.attach(io: photo7, filename: "m7.jpg")
 p7.save
 
-p8 = Photo.new(user_id: user1.id, album_id: a2.id, img_url: "m8.jpg")
+p8 = Photo.new(user_id: user1.id, album_id: a2.id, img_url: "Starry Night")
 photo8 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/m8.jpg")
 p8.photo.attach(io: photo8, filename: "m8.jpg")
 p8.save
 
 # Test Album
-p9 = Photo.new(user_id: user2.id, album_id: a3.id, img_url: "shirne-2.jpg")
+p9 = Photo.new(user_id: user2.id, album_id: a3.id, img_url: "Shrine 2")
 photo9 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/shirne-2.jpg")
 p9.photo.attach(io: photo9, filename: "shirne-2.jpg")
 p9.save
 
 # Warriors Album
-p10 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "steph.jpg")
+p10 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "Steph")
 photo10 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/steph.jpg")
 p10.photo.attach(io: photo10, filename: "steph.jpg")
 p10.save
 
-p11 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "big-4.jpg")
+p11 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "The Big 4")
 photo11 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/big-4.jpg")
 p11.photo.attach(io: photo11, filename: "big-4.jpg")
 p11.save
 
-p12 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "klay.jpg")
+p12 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "Klay")
 photo12 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/klay.jpg")
 p12.photo.attach(io: photo12, filename: "klay.jpg")
 p12.save
 
-p13 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "75.jpg")
+p13 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "75")
 photo13 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/75.jpg")
 p13.photo.attach(io: photo13, filename: "75.jpg")
 p13.save
 
-p14 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "team.jpg")
+p14 = Photo.new(user_id: user2.id, album_id: a4.id, img_url: "Warriors Squad (2019-2020)")
 photo14 = URI.open("https://shuttr-seeds.s3.us-west-1.amazonaws.com/team.jpg")
 p14.photo.attach(io: photo14, filename: "team.jpg")
 p14.save
