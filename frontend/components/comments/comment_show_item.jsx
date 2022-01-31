@@ -66,11 +66,11 @@ class CommentShowItem extends React.Component{
 
         //users can edit comments that they created
         const editComment = currentUserId === comment.user_id ? 
-            <img className="comment-edit-icon" src={edit} alt="edit" onClick={this.toggleUpdateComment}>
+            <img className="comment-edit-icon" src={window.edit} alt="edit" onClick={this.toggleUpdateComment}>
             </img> : "";
 
         const trashComment = currentUserId === comment.user_id ?
-            <img className="comment-delete-icon" src={trash} alt="trash" onClick={this.onDelete}>
+            <img className="comment-delete-icon" src={window.trash_black} alt="trash" onClick={this.onDelete}>
             </img> : "";
 
 
