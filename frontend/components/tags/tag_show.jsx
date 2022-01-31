@@ -30,7 +30,7 @@ class TagShow extends React.Component {
                     <ul className="tags-items-list">
                         {TagShowItems}
                     </ul>
-                    <TagFormContainer />
+                    <TagFormContainer/>
 
                 </div>
             </>

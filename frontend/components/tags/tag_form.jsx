@@ -12,6 +12,10 @@ class TagForm extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        // this.props.fetchPhoto(this.props.photoId);
+    }
+
     updateName(e){
         this.setState({
             name: e.target.value
@@ -27,6 +31,8 @@ class TagForm extends React.Component{
     }
 
     render(){
+        // console.log(this.props.currentUserId)
+        // console.log(this.props.photo[0].user_id)
         const tagForm = this.props.currentUserId === this.props.photo[0].user_id ? 
             <form className="tag-form-container" onSubmit={this.handleSubmit}>
                 <input

@@ -71,7 +71,7 @@ class PhotoShow extends React.Component{
                         <div className="photo-show-title">{photo.img_url}</div>
                         <CommentShowContainer />
                     </div>
-                    <TagShowContainer />
+                    <TagShowContainer/>
                 </div>
 
             </div>
