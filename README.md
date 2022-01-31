@@ -47,10 +47,11 @@ Comments belong to a `user` and a `photo`. Each photo will have a comments secti
 
 <img src="app/assets/images/comment.gif">
 
+## Tags
+
 ### Tags
 Tags belong to a `photo_id` and a `tag_id`. Tags are connected to Photos via a join association between `tags` and `photos` in a `joins_table` called `photo_Tags`.
 
-#Challenge: 
-If a user creates a new tag for a photo that has already been used on a different phhoto, I didn't want the application to create a completely new row entry on the backend for a tag that has already been used. So on the backend, when a user creates a tag for a photo, first check to see if the tag name already exists. If it returns nil, that means it does not exist so I create that new tag. Then it proceeds to create an association using the `joins_table` to associate that tag name with the photo. And since `tags` has the `has_many` association with `photos` we don't need to create a new row entry for every tag made. Instead we create a `PhotoTag` that uses the id's of `photos` and `tags` to associate with each other.
+**Challenge:** If a user creates a new tag for a photo that has already been used on a different phhoto, I didn't want the application to create a completely new row entry on the backend for a tag that has already been used. So on the backend, when a user creates a tag for a photo, first check to see if the tag name already exists. If it returns nil, that means it does not exist so I create that new tag. Then it proceeds to create an association using the `joins_table` to associate that tag name with the photo. And since `tags` has the `has_many` association with `photos` we don't need to create a new row entry for every tag made. Instead we create a `PhotoTag` that uses the id's of `photos` and `tags` to associate with each other.
 
 
