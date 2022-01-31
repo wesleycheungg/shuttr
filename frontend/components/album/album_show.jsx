@@ -25,9 +25,9 @@ class AlbumShow extends React.Component{
 
     render(){
         let albumTitle, albumDescription, user;
-        console.log(this.props.album)
-        console.log(this.props.user)
-        console.log(this.props.albumId)
+            // console.log(this.props.album)
+            // console.log(this.props.user)
+            // console.log(this.props.albumId)
         if (this.props.album) {
             albumTitle = this.props.album.title;
             albumDescription = this.props.album.description;

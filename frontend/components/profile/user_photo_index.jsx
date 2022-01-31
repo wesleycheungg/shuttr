@@ -7,10 +7,7 @@ class UserPhotoIndex extends React.Component {
     }
 
     componentDidMount(){
-        // console.log(this.props.userId)
-        // console.log("this is componenet did mount")
         this.props.fetchUserPhotos(this.props.userId)
-        console.log(this.props.photoLength)
     }
 
     render() {
@@ -31,7 +28,6 @@ class UserPhotoIndex extends React.Component {
             )
         })
 
-        console.log(photos)
 
         return (
             <div className="profile-container">
