@@ -62,10 +62,13 @@
     background-color: black;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     z-index: 5;
+    padding: 8px 8px;
 }
 
 .footer-logos {
-    
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }
