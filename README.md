@@ -38,7 +38,7 @@ Albums belong to a `user` and can hold many `photos`. Users will be able to view
 ## Albums
 
 ### Creating a Album
-Users can create an album by clicking the `Profile` button on the top right. Then click the `Albums` button on the profile nav bar which will take the user to a page with all the user's albums. Then click the `Create New Album` for the create new album form.
+Users can create an `album` by clicking the `Profile` button on the top right. Then click the `Albums` button on the profile nav bar which will take the user to a page with all the user's albums. Then click the `Create New Album` for the create new album form.
 
 ## Tags
 
