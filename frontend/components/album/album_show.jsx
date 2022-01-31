@@ -53,6 +53,7 @@ class AlbumShow extends React.Component{
                     <div className="album-photos-container">
                         {photos}
                     </div>
+                    <div className={(photos.length < 1 ? "msg-unhidden" : "msg-hidden")}>You have no photos in this Album! Use the upload button on the Nav bar to upload photos into this Album!</div>
                 </div>
             </div>
         )
