@@ -33,7 +33,7 @@ Users can add photos to albums using the `Upload` button as well. There is a dro
 ### Viewing a Photo
 Albums belong to a `user` and can hold many `photos`. Users will be able to view a gallery of photos via the `Explore Page`, `Photostream Page`, or `Album Page`. If a photo is clicked, they will be brought to that photo's show page where the photo is individually displayed and users can make comments.
 
-<img src="app/assets/images/github/photos.gif">
+<img src="app/assets/images/github/photo.gif">
 
 ## Albums
 
