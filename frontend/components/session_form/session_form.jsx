@@ -57,7 +57,7 @@ class SessionForm extends React.Component{
         const type = this.props.formType
         const form = type === "Log In" ?
                 <form className="form-container-login" onSubmit={this.handleSubmit}>
-                <img className="session-form-logo" src={shutter} alt="shuttr-logo"></img>
+                <img className="session-form-logo" src={window.shuttr_logo} alt="shuttr-logo"></img>
                 <h1 className="form-container-header">
                         Log in to Shuttr
                     </h1>
@@ -91,7 +91,7 @@ class SessionForm extends React.Component{
                 </form>
             :
             <form className="form-container-signup" onSubmit={this.handleSubmit}>
-                <img className="session-form-logo" src={shutter} alt="shuttr-logo"></img>
+                <img className="session-form-logo" src={window.shuttr_logo} alt="shuttr-logo"></img>
                 <h1 className="form-container-header">
                     Sign up for Shuttr
                 </h1>
