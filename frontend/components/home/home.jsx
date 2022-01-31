@@ -25,9 +25,15 @@ class Home extends React.Component{
                     <button className="start-for-free-btn"><Link className="free-btn" to="/signup">Start for Free</Link></button>
                 </div>
                 <div className="footer-container">
-                    <img className="footer-logos" src={window.github}></img>
-                    <img className="footer-logos" src={window.linkedin}></img>
-                    <img className="footer-logos" src={window.angellist}></img>
+                    <a href="https://github.com/wesleycheungg" target="_blank">
+                        <img className="footer-logos" src={window.github}></img>
+                    </a>
+                    <a href="https://www.linkedin.com/in/cheungwesley/" target="_blank">
+                        <img className="footer-logos" src={window.linkedin}></img>
+                    </a>
+                    <a href="https://angel.co/u/wesley-cheung-6" target="_blank">
+                        <img className="footer-logos" src={window.angellist}></img>
+                    </a>
                 </div>
             </div>
         )

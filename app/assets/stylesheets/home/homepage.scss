@@ -43,6 +43,7 @@
     padding-right: 12px;
     font-size: 18px;
     font-weight: 480;
+    transition: all 0.3s ease 0s;
 }
 
 .start-for-free-btn:hover {
@@ -70,5 +71,10 @@
 .footer-logos {
     width: 30px;
     height: 30px;
-    margin-right: 10px;
+    margin-right: 20px;
+    transition: all 0.3s ease 0s;
+}
+
+.footer-logos:hover {
+    opacity: 80%;
 }

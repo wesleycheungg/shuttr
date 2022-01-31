@@ -128,7 +128,7 @@ class SessionForm extends React.Component{
                 <div className="error-message">
                     {this.props.errors.map( error => {
                         return (
-                            <div>
+                            <div key={error.id}>
                                 {error}
                                 <br></br>
                             </div>
