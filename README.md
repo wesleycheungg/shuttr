@@ -30,10 +30,10 @@ Users can click and add photos along with a photo totle to any album they alread
 ### Uploading Photos to Album
 Users can add photos to albums using the `Upload` button as well. There is a drop down menu in which they can select albums they have already created and would like the photo they are currently uploading to be placed in there. Photos and Albums are connected with a join association between `albums` and `photos` in a `joins_table` called `album_photos`.
 
-<img src="app/assets/images/photo.gif">
-
 ### Viewing a Photo
 Albums belong to a `user` and can hold many `photos`. Users will be able to view a gallery of photos via the `Explore Page`, `Photostream Page`, or `Album Page`. If a photo is clicked, they will be brought to that photo's show page where the photo is individually displayed and users can make comments.
+
+<img src="app/assets/images/github/photos.gif">
 
 ## Albums
 
