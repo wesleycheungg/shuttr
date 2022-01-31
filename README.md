@@ -75,6 +75,6 @@ Tags belong to a `photo_id` and a `tag_id`. Tags are connected to Photos via a j
 ## Comments
 
 ### Comments
-Comments belong to a `user` and a `photo`. Each photo will have a comments section below the image on it's Photo Show Page when the photo is clicked on. Comments can only be deleted by the `user` who created it. Other users will not be able to see the `delete icon` next to comments that are not thiers.
+Comments belong to a `user` and a `photo`. Each photo will have a comments section below the image on it's Photo Show Page when the photo is clicked on. Comments can only be **deleted** and **edited** by the `user` who created it. Other users will not be able to see the `delete icon` next to comments that are not thiers.
 
-<img src="app/assets/images/comment.gif">
+<img src="app/assets/images/github/warriors.gif">
