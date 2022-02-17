@@ -23,7 +23,7 @@ const removePhoto = (photoId) => ({
 const receivePhotoErrors = (errors) => ({
     type: RECEIVE_PHOTO_ERRORS,
     errors
-})
+}) 
 
 export const fetchAlbumPhotos = (userId, albumId) => (dispatch) => {
     return PhotoAPIUtil.fetchAlbumPhotos(userId, albumId)
