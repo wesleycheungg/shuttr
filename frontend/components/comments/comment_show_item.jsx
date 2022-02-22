@@ -70,7 +70,7 @@ class CommentShowItem extends React.Component{
             </img> : "";
 
         const trashComment = currentUserId === comment.user_id ?
-            <img className="comment-delete-icon" src={window.trash_black} alt="trash" onClick={this.onDelete}> 
+            <img className="comment-delete-icon" src={window.trash_black} alt="trash" onClick={this.onDelete}>
             </img> : "";
 
 
