@@ -62,7 +62,7 @@ Tags belong to a `photo_id` and a `tag_id`. Tags are connected to Photos via a j
         #if tag doesn't save, then render errors
         if !@tag.save
             render json: @tag.errors.full_messages, status: 422
-        #if tag does save, we want do not want to create duplicate. instead create a PhotoTag
+        #if tag does save, we do not want to create duplicate. instead create a PhotoTag
         #using the id's for the photo and tag to associate with each other
         else
             photo_id = params[:photo_id]
