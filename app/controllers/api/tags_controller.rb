@@ -19,7 +19,7 @@ class Api::TagsController < ApplicationController
         #if tag does save, we want do not want to create duplicate. instead create a PhotoTag
         #using the id's for the photo and tag to associate with each other
         else
-            photo_id = params[:photo_id] 
+            photo_id = params[:photo_id]
             PhotoTag.create(photo_id: photo_id, tag_id: @tag.id)
             render :show
         end
