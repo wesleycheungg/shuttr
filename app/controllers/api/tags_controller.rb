@@ -1,6 +1,6 @@
 class Api::TagsController < ApplicationController
     #find all tags for a photo
-    def index
+    def index 
         photo_id = params[:photo_id]
         @tags = Photo.find(photo_id).tags
         render :index
