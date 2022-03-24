@@ -25,7 +25,7 @@ class Api::TagsController < ApplicationController
         end
     end
 
-    def destroy 
+    def destroy
         @tag = Tag.find(params[:id])
         photo_id = params[:photoId]
         photo_tag = PhotoTag.find_by(tag_id: @tag.id, photo_id: photo_id)
