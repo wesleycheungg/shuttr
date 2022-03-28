@@ -20,4 +20,4 @@ const photoReducer = (oldState = {}, action) => {
     }
 } 
 
-export default photoReducer;
+export default photoReducer; 
