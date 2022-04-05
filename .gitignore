@@ -30,4 +30,4 @@
 
 bundle.js*
 
-/.env
+/env
