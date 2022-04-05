@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { connect } from 'react-redux'
 import { fetchPhoto, deletePhoto } from '../../actions/photos_actions';
 import { fetchAllUsers } from '../../actions/user_actions';
