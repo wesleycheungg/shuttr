@@ -18,4 +18,4 @@ const mDTP = (dispatch) => ({
     fetchUserAlbums: (userId) => dispatch(fetchUserAlbums(userId))
 })
 
-export default connect(mSTP, mDTP)(PhotoCreate)
+export default connect(mSTP, mDTP)(PhotoCreate) 
